@@ -1,0 +1,37 @@
+.headerWrap{
+    position: sticky;
+    top:40px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid black;
+    z-index: 9999;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 100px;
+}
+.logo{
+    width: 200px;
+    height: 60px;
+    border: 1px solid blue;
+}
+.logo>img{
+    width: 100%;
+    height: 100%;
+}
+.nav{
+    display:flex;
+    border: 1px solid blue;
+}
+.nav li{
+    font-weight: bold;
+    font-size: 32px;
+    padding: 0 21px;
+}
+
+@media screen and (max-width:1024px){
+    .nav li{
+        font-size: 24px;
+    }
+}

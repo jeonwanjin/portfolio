@@ -1,0 +1,127 @@
+#backsection{
+    position: absolute;
+    top:0;
+    left: 0;
+    background: linear-gradient(180deg, #000000f1 20%,rgba(0, 0, 0, 0.315) 70%);
+    width:100%;
+    height: 100%;
+}
+
+.main{
+    position: relative;
+    width: 90%;
+    height: 100vh;
+    margin: 0 auto;
+    overflow: hidden;
+    z-index: 10;
+}
+.intro{
+    position: absolute;
+    width: 1720px;
+    height: 1000px;
+    z-index: 9;
+}
+.intro>img{
+    width:100%;
+    height:100%;
+}
+.flash{
+    position: absolute;
+    width:100%;
+    height:100%;
+    animation:flash 5s linear infinite, flash2 0.08s linear infinite;
+}
+@keyframes flash{
+      0% {
+        opacity: 1;
+      }
+      25% {
+        opacity: 1;
+      }
+      25.1% {
+        opacity: 0;	
+      }
+      100% {
+        opacity: 0;
+      }
+}
+@keyframes flash2{
+    0% {
+    background-color: rgba(255, 255, 255, 0.411);
+    }
+    100% {
+    background-color: rgba(0, 0, 8, 0.3);
+    }
+}
+.clockWrap{
+    position: relative;
+    z-index: 20;
+}
+.clock{
+    position: relative;
+    width: 10px;
+    height: 45px;
+    margin-top: 215px;
+    margin-left: 265px;
+    animation: rotate_image 30s linear infinite;
+    transform-origin: 0% 0%;
+    z-index: 999;
+}
+@keyframes rotate_image{
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.monitorWrap{
+    position: relative;
+    z-index: 20;
+    border: 1px solid red;
+}
+.monitor{
+    width: 256px;
+    height: 236px;
+    margin-left: 1158px;
+}
+
+
+
+.btnWrap{
+    position: relative;
+    z-index: 20;
+    border: 1px solid red;
+}
+
+
+
+.on{
+    width: 255px;
+    height: 204px;
+    z-index: 99;
+    transition: 1s ease-in-out;
+}
+.btn{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    top:530px;
+    right:410px;
+    z-index: 990;
+}
+.btnLight{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    top:530px;
+    right:410px;
+    z-index: 990;
+    animation:btn 1s linear infinite;
+}
+
+@keyframes btn{
+    0% {
+    background-color: rgba(255, 0, 0, 0.384);
+    }
+    100% {
+    background-color: rgba(0, 255, 21, 0.438);
+    }
+}
