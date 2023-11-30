@@ -1,4 +1,7 @@
-.App{
-  padding-top: 40px;
+body{
   background-color: white;
+  overflow-x: hidden;
+}
+.flex{
+  display: flex;
 }

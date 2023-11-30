@@ -72,8 +72,8 @@ const Main = () => {
         <div className='btnWrap'>
         <img className='btn' src={btn}/>
         <div className={`btnLight ${animationOn ? 'off' : 'on'}`} onClick={handleBtnClick}></div>
-        </div>
         <div className='mainBlock'></div>
+        </div>
         <Back />
         <Section1/>
       </div>

@@ -3,35 +3,34 @@
     top:0;
     left: 0;
     background: linear-gradient(180deg, #000000f1 20%,rgba(0, 0, 0, 0.315) 70%);
-    width:100%;
-    height: 100%;
+    width:100%; 
+    height: 100vh;
 }
-
 .main{
     position: relative;
-    width: 90%;
-    height: 100vh;
+    width:90%; 
+    height: 400vh;
     margin: 0 auto;
-
+    margin-top: 40px;
     z-index: 10;
 }
 .intro{
     position: absolute;
-    width: 1720px;
-    height: 1000px;
+    top:0;
+    left: 0;
+    width:100%; 
     z-index: 9;
-    
 }
 .intro>img{
-    width:100%;
+    width: 1720px;
     height:100%;
-  
 }
-
 .flash{
     position: absolute;
-    width:100%;
-    height:100%;
+    top:0;
+    left: 0;
+    width:100%; 
+    height:100vh;
     animation:flash 5s linear infinite, flash2 0.08s linear infinite;
 }
 @keyframes flash{
@@ -64,7 +63,7 @@
     position: relative;
     width: 10px;
     height: 45px;
-    margin-top: 216px;
+    margin-top: 210px;
     margin-left: 265px;
     animation: rotate_image 30s linear infinite;
     transform-origin: 0% 0%;
@@ -78,17 +77,18 @@
 .monitorWrap{
     position: relative;
     z-index: 20;
+    height: 228px;
 }
 .monitor{
-    width: 256px;
-    height: 236px;
+    width: 257px;
+    height: 234px;
     margin-left: 1158px;
     opacity: 0;
+    transform: translateY(-6px);
     transition: 1s ease-out;
 }
 .monitor.on{
     opacity: 1;
-
 }
 
 .btnWrap{
@@ -134,6 +134,6 @@
 }
 
 .mainBlock{
-    width: 100%;
-    height: 478px;
+    width:100%;
+    height: 460px;
 }
