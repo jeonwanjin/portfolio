@@ -12,7 +12,7 @@
     width: 90%;
     height: 100vh;
     margin: 0 auto;
-    overflow: hidden;
+
     z-index: 10;
 }
 .intro{
@@ -20,11 +20,14 @@
     width: 1720px;
     height: 1000px;
     z-index: 9;
+    
 }
 .intro>img{
     width:100%;
     height:100%;
+  
 }
+
 .flash{
     position: absolute;
     width:100%;
@@ -61,7 +64,7 @@
     position: relative;
     width: 10px;
     height: 45px;
-    margin-top: 215px;
+    margin-top: 216px;
     margin-left: 265px;
     animation: rotate_image 30s linear infinite;
     transform-origin: 0% 0%;
@@ -75,53 +78,62 @@
 .monitorWrap{
     position: relative;
     z-index: 20;
-    border: 1px solid red;
 }
 .monitor{
     width: 256px;
     height: 236px;
     margin-left: 1158px;
+    opacity: 0;
+    transition: 1s ease-out;
 }
+.monitor.on{
+    opacity: 1;
 
-
+}
 
 .btnWrap{
     position: relative;
     z-index: 20;
-    border: 1px solid red;
-}
-
-
-
-.on{
-    width: 255px;
-    height: 204px;
-    z-index: 99;
-    transition: 1s ease-in-out;
 }
 .btn{
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    top:530px;
-    right:410px;
+    margin-left: 1363px;
     z-index: 990;
 }
 .btnLight{
+    position: relative;
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    top:530px;
-    right:410px;
+    margin-top:-22px;
+    margin-left: 1363px;
     z-index: 990;
-    animation:btn 1s linear infinite;
+    cursor: pointer;
+    animation:off 1s linear infinite;
 }
-
-@keyframes btn{
+.btnLight.on{
+    animation:on 1s linear infinite;
+}
+@keyframes off{
     0% {
-    background-color: rgba(255, 0, 0, 0.384);
+    background-color: rgba(255, 0, 0, 0.1);
     }
     100% {
-    background-color: rgba(0, 255, 21, 0.438);
+    background-color: rgba(255, 0, 0, 0.4);
     }
+}
+@keyframes on{
+    0% {
+    background-color: rgba(30, 255, 0, 0.1);
+    }
+    100% {
+    background-color: rgba(30, 255, 0, 0.4);
+    }
+}
+
+.mainBlock{
+    width: 100%;
+    height: 478px;
 }

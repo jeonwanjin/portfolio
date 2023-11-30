@@ -1,6 +1,6 @@
 import { Routes, Route} from 'react-router-dom';
-import Main from './components/main/main';
-import Header from './components/header/header';
+import Main from './components/main';
+import Header from './components/header';
 import './css/App.css'
 import './css/reset.css'
 
