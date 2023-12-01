@@ -3,20 +3,19 @@ import { useState,useEffect } from 'react';
 import arrow from '../img/arrow.png'
 import { Link } from 'react-router-dom';
 
-const Section1 = () => {
+const Section1 = ({ updateShowClick }) => {
 
   const [showAboutL,setshowAboutL] = useState(false);
   const [showAboutR,setshowAboutR] = useState(false);
   const [showAboutRp,setshowAboutRp] = useState(true);
   const [showAboutBtn,setshowAboutBtn] = useState(true);
-  const [showClick,setshowClick] = useState(true);
 
   const handleMouseEnter = () => {
-    setshowClick(false)
+    updateShowClick(false);
   };
 
   const handleMouseLeave = () => {
-    setshowClick(true)
+    updateShowClick(true);
   };
   
   useEffect(() => { 

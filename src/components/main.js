@@ -20,9 +20,11 @@ const Main = () => {
     const [showIntro3, setShowIntro3] = useState(false);
     const [showIntro4, setShowIntro4] = useState(false);
     const [position, setPosition] = useState({ x: 0, y: 0 });
-    const [showClick,setshowClick] = useState(true);
+    const [showClick,setShowClick] = useState(true);
 
-    
+    const updateShowClick = (value) => {
+      setShowClick(value);
+    };
     const handleMouseMoveAndScroll = (e) => {
       const mouseX = e.clientX;
       const mouseY = e.clientY;
@@ -31,11 +33,11 @@ const Main = () => {
   
     };
     const handleMouseEnter = () => {
-      setshowClick(false)
+      setShowClick(false)
     };
   
     const handleMouseLeave = () => {
-      setshowClick(true)
+      setShowClick(true)
     };
     
     const handleBtnClick = () => {
@@ -97,7 +99,7 @@ const Main = () => {
         <div className='flash'></div>
         <Back /> 
         <div className={showClick ? "click" : "click clickOn"} style={{ position: 'absolute', left: `${position.x}px`, top: `${position.y}px`}}></div>
-        <Section1/>
+        <Section1 updateShowClick={updateShowClick} />
       </div>
          
     );

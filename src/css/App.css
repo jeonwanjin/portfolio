@@ -17,5 +17,6 @@ body{
   z-index: 2 !important;
 }
 .clickOn{
+  transition: 0.5s ease-in;
   transform: scale(5);
 }
