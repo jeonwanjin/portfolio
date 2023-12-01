@@ -69,6 +69,7 @@
     overflow: hidden;
     visibility: hidden;
 }
+
 button{
     cursor: pointer;
     background:none;
@@ -76,17 +77,6 @@ button{
     font-size: 32px;
     font-weight: bold;
     border: none;
-}
-.click{
-    width: 200px; 
-    height: 200px; 
-    border-radius: 50%; 
-    background-color:black !important; 
-    mix-blend-mode: difference;
-    z-index: 9999 !important;
-  }
-  .click.clickOn{
-    transform: scale(8) !important;
 }
 .aboutBtnOn{
     animation:btnOn 1s linear forwards;
@@ -96,7 +86,17 @@ button{
     width: 30px;
     height: 30px;
 }
-
+.arrowOn{
+    animation:arrowOn 0.7s linear infinite;
+}
+@keyframes arrowOn{
+    0%{
+       transform: translateX(-50px);     
+    }
+    100%{
+        transform: translateX(0px);     
+    }
+}
 @keyframes btnOn{
     0%{
         max-width: 0px;

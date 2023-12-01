@@ -1,7 +1,6 @@
 import '../css/section1.css'
 import { useState,useEffect } from 'react';
 import arrow from '../img/arrow.png'
-import click from '../img/click.png'
 import { Link } from 'react-router-dom';
 
 const Section1 = () => {
@@ -11,16 +10,6 @@ const Section1 = () => {
   const [showAboutRp,setshowAboutRp] = useState(true);
   const [showAboutBtn,setshowAboutBtn] = useState(true);
   const [showClick,setshowClick] = useState(true);
-  const [position, setPosition] = useState({ x: 0, y: 0 });
-
-  
-  const handleMouseMoveAndScroll = (e) => {
-    const mouseX = e.clientX;
-    const mouseY = e.clientY;
-    const scrollY = window.pageYOffset;
-    setPosition({ x: mouseX -100, y: mouseY -1200 + scrollY });
-
-  };
 
   const handleMouseEnter = () => {
     setshowClick(false)
@@ -29,12 +18,9 @@ const Section1 = () => {
   const handleMouseLeave = () => {
     setshowClick(true)
   };
-
-
-
+  
   useEffect(() => { 
   
-
     const handleScroll = () => {
         const scrollY = window.pageYOffset;
 
@@ -48,7 +34,6 @@ const Section1 = () => {
         }
 
         if(scrollY >= 900){
-
           setTimeout(() => {
             setshowAboutRp(false);
           }, 1000);
@@ -62,20 +47,14 @@ const Section1 = () => {
       };
       
       window.addEventListener('scroll', handleScroll);
-      window.addEventListener('mousemove', handleMouseMoveAndScroll);
-
       return () => {
       window.removeEventListener('scroll', handleScroll);
-      window.removeEventListener('mousemove', handleMouseMoveAndScroll);
       };
     }, []);
 
     return (  
       
       <div className="section1">
-        <div className={showClick ? "click" : "click clickOn"} style={{ position: 'absolute', left: `${position.x}px`, top: `${position.y}px` }}>
-        </div>
-  
         <div className={showAboutL ? "aboutMe" : "aboutMe aboutMeOn"}>
           <p>About Me</p> 
         </div>
@@ -95,16 +74,15 @@ const Section1 = () => {
           <p>E-mail: jwj1212121@gmail.com</p>
         </div>
         <Link to="/AboutMe" className={showAboutBtn ? "aboutBtn" : "aboutBtn aboutBtnOn"}
-             onMouseEnter={handleMouseEnter}
-             onMouseLeave={handleMouseLeave}
+         onMouseEnter={handleMouseEnter}
+         onMouseLeave={handleMouseLeave}
          >
         <button>
           더보기
-          <img className='arrow' src={arrow} alt='arrow'></img>
+          <img className="arrow" src={arrow} alt='arrow'></img>
         </button>
         </Link>
         </div>
-
       </div>
     );
 }

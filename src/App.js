@@ -5,12 +5,15 @@ import './css/App.css'
 import './css/reset.css'
 
 function App() {
+
   return (
     <div className="App">
+
         <Header/>
         <Routes>
           <Route exact path='/*' element={<Main/>}/>
         </Routes>
+      
     </div>
   );
 }

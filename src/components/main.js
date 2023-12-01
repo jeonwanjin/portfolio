@@ -12,7 +12,6 @@ import Section1 from './section1';
 
 
 
-
 const Main = () => {
 
     const [animationOn, setAnimationOn] = useState(true);
@@ -20,6 +19,24 @@ const Main = () => {
     const [showIntro2, setShowIntro2] = useState(false);
     const [showIntro3, setShowIntro3] = useState(false);
     const [showIntro4, setShowIntro4] = useState(false);
+    const [position, setPosition] = useState({ x: 0, y: 0 });
+    const [showClick,setshowClick] = useState(true);
+
+    
+    const handleMouseMoveAndScroll = (e) => {
+      const mouseX = e.clientX;
+      const mouseY = e.clientY;
+      const scrollY = window.pageYOffset;
+      setPosition({ x: mouseX -108, y: mouseY -153 + scrollY });
+  
+    };
+    const handleMouseEnter = () => {
+      setshowClick(false)
+    };
+  
+    const handleMouseLeave = () => {
+      setshowClick(true)
+    };
     
     const handleBtnClick = () => {
       setMonitorOn(!isMonitorOn);
@@ -29,8 +46,6 @@ const Main = () => {
     useEffect(() => { 
       const handleScroll = () => {
           const scrollY = window.pageYOffset;
-
-          console.log(scrollY)
 
           if (scrollY <= 150) {
             setShowIntro2(false);
@@ -48,11 +63,13 @@ const Main = () => {
             setShowIntro4(true);
           }
         };
-        
+
+        window.addEventListener('mousemove', handleMouseMoveAndScroll);
         window.addEventListener('scroll', handleScroll);
 
         return () => {
 
+        window.removeEventListener('mousemove', handleMouseMoveAndScroll);
         window.removeEventListener('scroll', handleScroll);
 
         };
@@ -61,23 +78,28 @@ const Main = () => {
   
     return (  
       <div className="main">
-        <Back /> 
+  
         <div className='intro'>
-        <img 
-        src={showIntro4 ? intro4 : (showIntro3 ? intro3 : (showIntro2 ? intro2 : intro))} alt="intro"
-        ></img>
+          <img 
+          src={showIntro4 ? intro4 : (showIntro3 ? intro3 : (showIntro2 ? intro2 : intro))} alt="intro"
+          ></img>
         </div>
-        <div className='flash'></div>
-        <div className='clockWrap'><img className='clock' src={clock}></img></div>
-        <div className='monitorWrap'><img className={`monitor ${isMonitorOn ? 'off' : 'on'}`} src={monitor}></img></div>
-        <div className='btnWrap'>
-        <img className='btn' src={btn}/>
-        <div className={`btnLight ${animationOn ? 'off' : 'on'}`} onClick={handleBtnClick}></div>
+        <div className='clockWrap'><img className='clock' src={clock} alt='clock'></img></div>
+        <div className='monitorWrap'><img className={`monitor ${isMonitorOn ? 'off' : 'on'}`} src={monitor} alt='monitor'></img></div>
+        <div className='btnWrap' 
+          onMouseOver={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+          >
+          <img className='btn' src={btn} alt='btn'/>
+          <div className={`btnLight ${animationOn ? 'off' : 'on'}`} onClick={handleBtnClick}></div>
+        </div>
         <div className='mainBlock'></div>
+        <div className='flash'></div>
+        <Back /> 
+        <div className={showClick ? "click" : "click clickOn"} style={{ position: 'absolute', left: `${position.x}px`, top: `${position.y}px`}}></div>
         <Section1/>
-        </div>
       </div>
-      
+         
     );
 }
  
