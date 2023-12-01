@@ -20,7 +20,7 @@ const Main = () => {
     const [showIntro2, setShowIntro2] = useState(false);
     const [showIntro3, setShowIntro3] = useState(false);
     const [showIntro4, setShowIntro4] = useState(false);
-
+    
     const handleBtnClick = () => {
       setMonitorOn(!isMonitorOn);
       setAnimationOn(!animationOn);
@@ -61,6 +61,7 @@ const Main = () => {
   
     return (  
       <div className="main">
+        <Back /> 
         <div className='intro'>
         <img 
         src={showIntro4 ? intro4 : (showIntro3 ? intro3 : (showIntro2 ? intro2 : intro))} alt="intro"
@@ -73,9 +74,8 @@ const Main = () => {
         <img className='btn' src={btn}/>
         <div className={`btnLight ${animationOn ? 'off' : 'on'}`} onClick={handleBtnClick}></div>
         <div className='mainBlock'></div>
-        </div>
-        <Back />
         <Section1/>
+        </div>
       </div>
       
     );

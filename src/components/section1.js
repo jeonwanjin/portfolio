@@ -1,19 +1,42 @@
 import '../css/section1.css'
 import { useState,useEffect } from 'react';
 import arrow from '../img/arrow.png'
+import click from '../img/click.png'
+import { Link } from 'react-router-dom';
+
 const Section1 = () => {
 
-  
   const [showAboutL,setshowAboutL] = useState(false);
   const [showAboutR,setshowAboutR] = useState(false);
   const [showAboutRp,setshowAboutRp] = useState(true);
   const [showAboutBtn,setshowAboutBtn] = useState(true);
+  const [showClick,setshowClick] = useState(true);
+  const [position, setPosition] = useState({ x: 0, y: 0 });
+
+  
+  const handleMouseMoveAndScroll = (e) => {
+    const mouseX = e.clientX;
+    const mouseY = e.clientY;
+    const scrollY = window.pageYOffset;
+    setPosition({ x: mouseX -100, y: mouseY -1200 + scrollY });
+
+  };
+
+  const handleMouseEnter = () => {
+    setshowClick(false)
+  };
+
+  const handleMouseLeave = () => {
+    setshowClick(true)
+  };
+
+
 
   useEffect(() => { 
+  
+
     const handleScroll = () => {
         const scrollY = window.pageYOffset;
-
-        console.log(scrollY)
 
         if(scrollY <= 500){
           setshowAboutL(true);
@@ -39,16 +62,20 @@ const Section1 = () => {
       };
       
       window.addEventListener('scroll', handleScroll);
+      window.addEventListener('mousemove', handleMouseMoveAndScroll);
 
       return () => {
-
       window.removeEventListener('scroll', handleScroll);
-
+      window.removeEventListener('mousemove', handleMouseMoveAndScroll);
       };
     }, []);
 
     return (  
+      
       <div className="section1">
+        <div className={showClick ? "click" : "click clickOn"} style={{ position: 'absolute', left: `${position.x}px`, top: `${position.y}px` }}>
+        </div>
+  
         <div className={showAboutL ? "aboutMe" : "aboutMe aboutMeOn"}>
           <p>About Me</p> 
         </div>
@@ -59,20 +86,25 @@ const Section1 = () => {
           <p>높이기 위해 노력하겠습니다.</p>
         </div>
         <div className='flex'>
-        <div className={showAboutRp ? "aboutMeRp" : "aboutMeRp aboutMeRpOn"}>
+        <div className={showAboutRp ? "aboutMeRp" : "aboutMeRp aboutMeRpOn"} >
           <p>Profile</p>
-          <p>HTML, CSS, JavaScript, 그리고 React 등의 기술을 터득하고 있으며,</p>
+          <p>HTML, CSS, JavaScript,React 등의 기술을 터득하고 있으며,</p>
           <p> 현재는 WebGL을 활용한 사이트 제작을 진행 중입니다.</p>
           <p>Name: 전완진</p>
           <p>Phone: 010-5009-4223</p>
           <p>E-mail: jwj1212121@gmail.com</p>
         </div>
-        <button className={showAboutBtn ? "aboutBtn" : "aboutBtn aboutBtnOn"}>
+        <Link to="/AboutMe" className={showAboutBtn ? "aboutBtn" : "aboutBtn aboutBtnOn"}
+             onMouseEnter={handleMouseEnter}
+             onMouseLeave={handleMouseLeave}
+         >
+        <button>
           더보기
-          <img className='arrow' src={arrow}></img>
+          <img className='arrow' src={arrow} alt='arrow'></img>
         </button>
-       
+        </Link>
         </div>
+
       </div>
     );
 }

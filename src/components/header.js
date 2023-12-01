@@ -2,6 +2,7 @@ import '../css/header.css'
 import logo from '../img/logo.png'
 import logo2 from '../img/logo2.png'
 import { useState,useEffect } from 'react';
+import { Link } from 'react-router-dom';
 const Header = () => {
 
   const [showLogo2,setShowLogo2] = useState(false);
@@ -39,7 +40,9 @@ const Header = () => {
     return (  
       <div className="headerWrap">
         <header className='header'>
+        <Link to="/portfolio">
             <h1 className={hideCat ? "logo2" : "logo"}><img src={showLogo2 ? logo2 : logo} alt="intro"></img></h1>
+        </Link>
             <ul className='nav'>
                     <li>Project</li>
                     <li>Cloning</li>
