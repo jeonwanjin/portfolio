@@ -12,32 +12,20 @@ import Section1 from './section1';
 
 
 
-const Main = () => {
+const Main = ({ position, showClick, updateShowClick }) => {
 
     const [animationOn, setAnimationOn] = useState(true);
     const [isMonitorOn, setMonitorOn] = useState(true);
     const [showIntro2, setShowIntro2] = useState(false);
     const [showIntro3, setShowIntro3] = useState(false);
     const [showIntro4, setShowIntro4] = useState(false);
-    const [position, setPosition] = useState({ x: 0, y: 0 });
-    const [showClick,setShowClick] = useState(true);
 
-    const updateShowClick = (value) => {
-      setShowClick(value);
-    };
-    const handleMouseMoveAndScroll = (e) => {
-      const mouseX = e.clientX;
-      const mouseY = e.clientY;
-      const scrollY = window.pageYOffset;
-      setPosition({ x: mouseX -108, y: mouseY -153 + scrollY });
-  
-    };
     const handleMouseEnter = () => {
-      setShowClick(false)
+      updateShowClick(false)
     };
   
     const handleMouseLeave = () => {
-      setShowClick(true)
+      updateShowClick(true)
     };
     
     const handleBtnClick = () => {
@@ -66,12 +54,10 @@ const Main = () => {
           }
         };
 
-        window.addEventListener('mousemove', handleMouseMoveAndScroll);
         window.addEventListener('scroll', handleScroll);
 
         return () => {
 
-        window.removeEventListener('mousemove', handleMouseMoveAndScroll);
         window.removeEventListener('scroll', handleScroll);
 
         };
@@ -98,7 +84,6 @@ const Main = () => {
         <div className='mainBlock'></div>
         <div className='flash'></div>
         <Back /> 
-        <div className={showClick ? "click" : "click clickOn"} style={{ position: 'absolute', left: `${position.x}px`, top: `${position.y}px`}}></div>
         <Section1 updateShowClick={updateShowClick} />
       </div>
          

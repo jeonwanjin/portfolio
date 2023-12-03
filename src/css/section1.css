@@ -3,21 +3,22 @@
     width: 100%;
     height: 100vh;
     margin: 0 auto;
-    background-color: white;
+    z-index: -1;
 }
+
 .aboutMe{
     padding-top: 100px;
-    font-size: 192px;
+    font-size: 124px;
     font-weight: bold;
     opacity: 0.2;
-    transform: translateX(1600px);
+    transform: translateX(1700px);
 }
 .aboutMe2{
-    padding-top: 50px;
-    font-size: 48px;
+    padding-top: 180px;
+    font-size: 36px;
     font-weight: bold;
     opacity: 0.2;
-    transform:translateX(-1200px);
+    transform:translateX(-1400px);
 }
 .aboutMe2 p{
     padding: 5px;
@@ -25,20 +26,22 @@
 .aboutMeOn{
     opacity: 1;
     transition: 2s ease-in-out;
-    transform: translateX(100px);
+    transform: translateX(0px);
 }
 .aboutMe2On{
     opacity: 1;
     transition: 2s ease-in-out;
-    transform: translateX(750px);
+    transform: translateX(205px);
 }
 .aboutMeRp{
-    margin-top: 30px;
-    margin-left: 200px;
-    padding: 30px;
-    opacity: 0.2;
+    position: relative;
+    margin-top: 50px;
+    margin-left: 800px;
+    margin-bottom: 50px;
+    padding: 10px;
+    opacity: 0;
     transition: 1s ease-in;
-    transform: translateY(200px);
+    transform: translateY(400px);
 }
 .aboutMeRpOn{
     opacity: 1;
@@ -48,48 +51,34 @@
     font-size: 24px;
     padding: 10px 0;
 }
-.aboutMeRp p:first-of-type{
-    font-size: 36px;
-    margin-bottom: 30px;
-}
-.aboutMeRp p:nth-of-type(3){
-    margin-bottom: 30px;
-}
 .aboutBtn{
-    margin-top: 280px;
-    max-width: 0px;
+    max-width:0px;
+    padding-bottom:20px; 
+    background:none;
+    font-size: 32px;
+    font-weight: bold;
+    border: none;
+    margin-left:810px;
     height: 100px;
     font-weight: bold;
-    background: none;
-    transition: 3s ease;
     white-space: nowrap;
-    border-bottom: 3px solid black;
-    background-color: black;
-    color: white;
+    border-bottom: 8px solid black;
     overflow: hidden;
     visibility: hidden;
     cursor: pointer;
 }
-
-button{
-    cursor: pointer;
-    background:none;
-    margin-top: 20px;
-    font-size: 32px;
-    font-weight: bold;
-    border: none;
-}
 .aboutBtnOn{
-    animation:btnOn 1s linear forwards;
+    animation:btnOn 1.3s linear forwards;
 }
 .arrow{
-    margin-left: 170px;
+    margin-left: 100px;
     width: 30px;
     height: 30px;
 }
 .arrowOn{
     animation:arrowOn 0.7s linear infinite;
 }
+
 @keyframes arrowOn{
     0%{
        transform: translateX(-50px);     
@@ -103,9 +92,7 @@ button{
         max-width: 0px;
     }
     100%{
-        max-width: 800px;
+        max-width:500px;
         visibility: visible;
-        background-color: white;
-        color: black;
     }
 }
