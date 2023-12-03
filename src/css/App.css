@@ -1,4 +1,4 @@
-body{
+.App{
   overflow-x: hidden;
   cursor: none;
 }
@@ -6,8 +6,6 @@ body{
   display: flex;
   z-index: -1;
 }
-
-
 .click{
   width: 30px;
   height: 30px;
