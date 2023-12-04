@@ -20,30 +20,27 @@ const Section1 = ({ updateShowClick }) => {
     updateShowClick(true);
     setArrowOn(false);
   };
-
   
   useEffect(() => { 
   
     const handleScroll = () => {
         const scrollY = window.pageYOffset;
 
-        if(scrollY <= 500){
+        if(scrollY <= 600){
           setshowAboutL(true);
           setshowAboutR(true);
+          setTimeout(() => {
+            setshowAboutRp(false);
+          }, 2000);
              
+          setTimeout(() => {
+            setshowAboutBtn(false);
+          }, 3000);  
         }else{
           setshowAboutL(false);
           setshowAboutR(false);
         }
-
-        if(scrollY >= 800){
-          setTimeout(() => {
-            setshowAboutRp(false);
-          }, 1000);
-          setTimeout(() => {
-            setshowAboutBtn(false);
-          }, 2500);
-        }else{
+        if(scrollY === 0){
           setshowAboutRp(true);
           setshowAboutBtn(true);
         }

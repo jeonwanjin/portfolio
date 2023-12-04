@@ -1,0 +1,28 @@
+{
+    "items": [
+      {
+        "img": "projectImg1",
+        "title": "Gyeongbokgung Festival",
+        "text": "Team Project / React / JSX / THREE.JS / 3D Modeling&TextureMap ",
+        "bgColor":"#3C3C3C"
+      },
+      {
+        "img": "projectImg2",
+        "title": "E-book",
+        "text": "Team Project / React / JSX / THREE.JS / Figma / 3D Modeling /  ",
+        "bgColor":"#83A78C"
+      },
+      {
+        "img": "projectImg3",
+        "title": "Gwangju Country Club",
+        "text": "Personal Project / HTML / CSS / JavaScript / Figma",
+        "bgColor":"#FAD582"
+      },
+      {
+        "img": "projectImg4",
+        "title": "Dictionary",
+        "text": "Personal Project / React / JSX / CSS ",
+        "bgColor":"#102045"
+      }
+    ]
+  }

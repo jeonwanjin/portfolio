@@ -62,14 +62,13 @@
     height: 100px;
     font-weight: bold;
     white-space: nowrap;
-    transition: 2s linear;
     border-bottom: 8px solid black;
     overflow: hidden;
     visibility: hidden;
     cursor: pointer;
 }
 .aboutBtnOn{
-    animation:btnOn 2s linear forwards;
+    animation:btnOn 1s linear forwards;
 }
 .arrow{
     margin-left: 100px;

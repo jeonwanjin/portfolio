@@ -9,6 +9,7 @@ import monitor from '../img/monitor.png'
 import btn from '../img/btn.png'
 import Back from './back';
 import Section1 from './section1';
+import Section2 from './section2';
 
 
 
@@ -85,6 +86,7 @@ const Main = ({ position, showClick, updateShowClick }) => {
         <div className='flash'></div>
         <Back /> 
         <Section1 updateShowClick={updateShowClick} />
+        <Section2 updateShowClick={updateShowClick} />
       </div>
          
     );

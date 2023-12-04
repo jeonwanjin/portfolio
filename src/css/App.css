@@ -1,6 +1,7 @@
 .App{
   overflow-x: hidden;
   cursor: none;
+  background-color: white;
 }
 .flex{
   display: flex;
