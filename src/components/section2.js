@@ -26,7 +26,7 @@ const Section2 = ({ updateShowClick }) => {
     const handleScroll = () => {
       const scrollY = window.pageYOffset;
   
-      if(scrollY >= 1500){
+      if(scrollY >= 1200){
         setShowPortfiolio(false);
         setTimeout(() => {
           setShowAticle(false);

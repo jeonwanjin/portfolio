@@ -10,6 +10,7 @@ import btn from '../img/btn.png'
 import Back from './back';
 import Section1 from './section1';
 import Section2 from './section2';
+import Section3 from './section3';
 
 
 
@@ -87,6 +88,7 @@ const Main = ({ position, showClick, updateShowClick }) => {
         <Back /> 
         <Section1 updateShowClick={updateShowClick} />
         <Section2 updateShowClick={updateShowClick} />
+        <Section3 updateShowClick={updateShowClick} />
       </div>
          
     );

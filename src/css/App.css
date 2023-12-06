@@ -1,7 +1,21 @@
+@font-face {
+  font-family: 'KyoboHand';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/KyoboHand.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+*{
+  font-family: 'KyoboHand';
+}
+
 .App{
   overflow-x: hidden;
   cursor: none;
   background-color: white;
+  overflow-y: hidden !important;  
+  overflow-x: hidden !important;
+  padding-top: 100px;
 }
 .flex{
   display: flex;
@@ -17,7 +31,25 @@
   z-index: 20;
 }
 .clickOn{ 
+  position: relative;
   transform: scale(4);
   background-color: white;
+  color: white;
   pointer-events: none;
+}
+.clickOn::after{
+  position: absolute;
+  content: "click!";
+  top:0;
+  left:27px;
+  font-size: 10px;
+  animation: clickOn 0.5s linear infinite;
+}
+@keyframes clickOn {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
 }

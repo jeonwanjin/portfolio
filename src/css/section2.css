@@ -1,9 +1,11 @@
-.section1{
+.section2{
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: auto;
     margin: 0 auto;
+    padding-bottom: 100px;
     z-index: -1;
+ 
 }
 .port{
     font-size: 124px;
@@ -11,9 +13,7 @@
     opacity: 0.2;
     transition: 1.8s ease-in-out;
     transform: translateX(1700px);
-    line-height: 0%;
-    margin-bottom: 190px;
-    margin-top: -50px;
+    margin-bottom: 100px;
 }
 .portOn{
     opacity: 1;
@@ -23,10 +23,10 @@
     width: 100%;
 }
 .projectItemContainer {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
   
 }
 .projectItemWrap{
@@ -45,7 +45,7 @@
     transition: 1s;
 }
 .projecTit{
-    font-size: 32px;
+    font-size: 36px;
     font-weight: bold;
     margin-bottom: 30px;
 }

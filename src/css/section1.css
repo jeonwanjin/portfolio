@@ -4,6 +4,7 @@
     height: 100vh;
     margin: 0 auto;
     z-index: -1;
+    
 }
 
 .aboutMe{
@@ -31,12 +32,12 @@
 .aboutMe2On{
     opacity: 1;
     transition: 2s ease-in-out;
-    transform: translateX(205px);
+    transform: translateX(305px);
 }
 .aboutMeRp{
     position: relative;
     margin-top: 50px;
-    margin-left: 800px;
+    margin-left: 820px;
     margin-bottom: 50px;
     padding: 10px;
     opacity: 0;
@@ -55,17 +56,17 @@
     max-width:0px;
     padding-bottom:20px; 
     background:none;
-    font-size: 32px;
+    font-size: 36px;
     font-weight: bold;
     border: none;
-    margin-left:810px;
+    margin-left:830px;
     height: 100px;
     font-weight: bold;
     white-space: nowrap;
     border-bottom: 8px solid black;
     overflow: hidden;
     visibility: hidden;
-    cursor: pointer;
+    cursor: none;
 }
 .aboutBtnOn{
     animation:btnOn 1s linear forwards;

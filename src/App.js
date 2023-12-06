@@ -26,7 +26,7 @@ function App() {
       <div className={showClick ? "click" : "click clickOn"} style={{ position: 'absolute', left: `${position.x}px`, top: `${position.y}px`}}></div>
         <Header position={position} showClick={showClick} updateShowClick={updateShowClick} />
         <Routes>
-          <Route exact path='/*' element={<Main position={position} showClick={showClick} updateShowClick={updateShowClick} />}/>
+          <Route exact path='/portfolio' element={<Main position={position} showClick={showClick} updateShowClick={updateShowClick} />}/>
         </Routes>
       </div>
     </div>
