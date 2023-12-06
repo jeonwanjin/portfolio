@@ -23,6 +23,7 @@
     max-width: 146px;
     height: 100px;
     overflow: hidden;
+    cursor: none;
 }
 .logo>img{  
     width: 100%;

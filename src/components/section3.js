@@ -26,11 +26,17 @@ const Section3 = ({ updateShowClick }) => {
   const [articleOn2,setArticleOn2] = useState(false);
   const [articleOn3,setArticleOn3] = useState(true);
   const [articleOn4,setArticleOn4] = useState(true);
+  const [upClick,setUpClick] = useState(true);
+  const [downClick,setDownClick] = useState(true);
   
   const [i, setI] = useState(1);
 
   const clickUp = () =>{
 
+    setUpClick(false);
+      setTimeout(() => {  
+        setUpClick(true);
+        },400);
 
     if (i === 0) {
       setArticleOn2(false);
@@ -87,6 +93,11 @@ const Section3 = ({ updateShowClick }) => {
   }
 
   const clickDown = () =>{
+
+    setDownClick(false);
+    setTimeout(() => {  
+      setDownClick(true);
+      },400);
 
     if (i === 1) {
       setArticleOn1(false);
@@ -178,11 +189,13 @@ const Section3 = ({ updateShowClick }) => {
         <div className='flex'>
           <div className="cloningItemWrap">
             <div className='cloningBtn'>
-              <img className='up' src={up}  
+              <img className={upClick ? 'up' : 'up clickUp'}
+              src={up}  
               onMouseOver={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
               onClick={clickUp}  alt="up"></img>
-              <img className='down' src={down} 
+              <img className={downClick ? 'down' : 'down clickDown'}
+              src={down} 
               onMouseOver={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
               onClick={clickDown} alt="down"></img>
