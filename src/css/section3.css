@@ -32,6 +32,7 @@
   width: 1720px;
   height: 900px;
   margin: 0 auto;
+  overflow: hidden;
 
 }
 .cloningArticle{
