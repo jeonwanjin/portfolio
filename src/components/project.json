@@ -14,12 +14,24 @@
       },
       {
         "img": "projectImg3",
-        "title": "Gwangju Country Club",
-        "text": "Personal Project / HTML / CSS / JavaScript / Figma",
-        "bgColor":"#FAD582"
+        "title": "Portfolio",
+        "text": "Personal Project / React / JSX / THREE.JS / CSS ",
+        "bgColor":"#FFF0CE"
       },
       {
         "img": "projectImg4",
+        "title": "Gwangju Country Club",
+        "text": "Personal Project / HTML / CSS / JavaScript / Figma",
+        "bgColor":"#A0372A"
+      },
+      {
+        "img": "projectImg6",
+        "title": "미니게임준비중",
+        "text": "Personal Project / React / JSX / CSS ",
+        "bgColor":"#102045"
+      },
+      {
+        "img": "projectImg6",
         "title": "Dictionary",
         "text": "Personal Project / React / JSX / CSS ",
         "bgColor":"#102045"

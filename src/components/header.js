@@ -57,7 +57,7 @@ const Header = ({ position, showClick, updateShowClick }  ) => {
       window.scrollTo({ top: 1900, behavior: 'smooth' });
     };
     const handleCloningClick = () => {
-      window.scrollTo({ top: 4000, behavior: 'smooth' });
+      window.scrollTo({ top: 4700, behavior: 'smooth' });
     };
     const handleAboutClick = () => {
       window.scrollTo({ top: 1050, behavior: 'smooth' });
