@@ -33,14 +33,26 @@
   height: 900px;
   margin: 0 auto;
   overflow: hidden;
-
 }
 .cloningArticle{
-  position:relative;
+  position:absolute;
   top:0;
   left:0;
   width: 1720px;
   height:900px;
+}
+.cloningArticle1{
+  z-index: 4;
+}
+.cloningArticle2{
+  z-index: 5;
+}
+.cloningArticle3{
+  z-index: 3;
+}
+.cloningArticle4{
+  z-index: 2;
+  opacity: 0;
 }
 .cloningItem{
   display: flex;
@@ -94,6 +106,7 @@
   position: absolute;
   box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.527);
   transition:transform 1s 0.2s cubic-bezier(0.68,0.03,0.29,1.09);
+  z-index: 99999 !important;
 }
 .cloningBtn{
   position: absolute;
@@ -124,25 +137,16 @@
   border-radius: 10px;
   box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.527);
 }
-.last{
-  transform: translateX(-1720px);
-  z-index: -1;
-}
-.articleUp1{
-  transform: translateX(-1720px);
-  z-index: -1 ;
-}
-.articleUp2{
-  transform: translateX(-3440px);
-  z-index: -1 ;
-}
-.articleUp3{
-  transform: translateX(-1720px);
-  z-index: -1 ;
+
+.articleUp{
+  transform: translateY(-900px);
 }
 
 .upOn{
   transform: translateY(-900px);
+}
+.upOn4{
+  opacity:1;
 }
 .downOn{
   transform: translateY(900px);

@@ -12,137 +12,103 @@
   const Section3 = ({ updateShowClick }) => {
 
     const [showCloning,setShowCloning] = useState(true);
-    const [articleUp1,setArticleUp1] = useState(true);
-    const [articleUp2,setArticleUp2] = useState(true);
-    const [articleUp3,setArticleUp3] = useState(true);
     const [upOn1,setUpOn1] = useState(true);
-    const [upOn2,setUpOn2] = useState(true);
-    const [upOn3,setUpOn3] = useState(true);
-    const [upOn4,setUpOn4] = useState(true);
     const [downOn1,setDownOn1] = useState(true);
+    const [upOn2,setUpOn2] = useState(true);
     const [downOn2,setDownOn2] = useState(true);
+    const [upOn3,setUpOn3] = useState(true);
     const [downOn3,setDownOn3] = useState(true);
-    const [downOn4,setDownOn4] = useState(true);
-    const [i, setI] = useState(0);
-
-    
+    const [upOn4,setUpOn4] = useState(true);
+    const [i, setI] = useState(1);
+  
     const clickUp = () =>{
-      console.log(i)
 
-      setI(prevI => {
 
-      if (prevI === 0) {
-
-        setArticleUp1(false);
-      
-        setTimeout(() => {
-
+      if (i === 0) {
         setUpOn1(false);       
         setDownOn1(false);
 
+        setTimeout(() => {  
+
+        setUpOn2(true);       
+        setDownOn2(true);  
+     
+
         },200);
+
       }
 
-      if (prevI === 1) {
-        
-        setArticleUp2(false);
-      
-        setTimeout(() => {
-                
-        setUpOn2(false);
+      if (i === 1) {
+
+        setUpOn1(false);       
+        setDownOn1(false);
+        setUpOn3(true);       
+        setDownOn3(true);
+        setTimeout(() => {  
+        setUpOn2(false);       
         setDownOn2(false);
 
         },200);
+
       }
 
-      
-      if (prevI === 2) {
+      if (i === 2) {
+        setUpOn4(false)
         
-        setArticleUp3(false);
-        
-        setTimeout(() => {
-                
-        setUpOn3(false);
+        setTimeout(() => {  
+
+        setUpOn3(false);       
         setDownOn3(false);
 
         },200);
+
       }
 
-      if (prevI === 3) {
-        
-        
-        setTimeout(() => {
-                
-        setUpOn4(false);
-        setDownOn4(false);
+      setI((i) => Math.min(3, i + 1)); 
 
-        },200);
-      }
-
-
-      return prevI + 1;
-
-      });
     }
 
     const clickDown = () =>{
-      console.log(i)
 
-      setI(prevI => {
-
-      if (prevI === 1) {
-
-        setArticleUp1(true);
-      
-        setTimeout(() => {
-
+      if (i === 1) {
+        setUpOn1(true);       
         setDownOn1(true);
-        setUpOn1(true);    
-
-        },200);
-      }
-
-      if (prevI === 2) {
-        
-        setArticleUp2(true);
 
         setTimeout(() => {
-                
-        setDownOn2(true);
-        setUpOn2(true);
+
+        setUpOn2(false);       
+        setDownOn2(false);    
 
         },200);
-      }
-      
-      if (prevI === 3) {
-        
-        setArticleUp3(true);
 
+      }
+
+      if (i === 2) {
+
+        setUpOn2(true);       
+        setDownOn2(true);   
         setTimeout(() => {
-                
-        setDownOn3(true);
-        setUpOn3(true);
+
+        setUpOn3(false);       
+        setDownOn3(false);    
 
         },200);
+
       }
-
-
-      if (prevI === 4) {
-
+      if (i === 3) {
+        setUpOn4(true)
+       
         setTimeout(() => {
-                
-        setDownOn4(true);
-        setUpOn4(true);
+
+        setUpOn3(true);       
+        setDownOn3(true);     
 
         },200);
 
-        prevI = 0;
       }
 
+      setI((i) => Math.max(0, i - 1)); 
 
-      return prevI - 1;
-
-      });
     }
 
     const handleMouseEnter = () => {
@@ -183,21 +149,27 @@
           <div className='flex'>
             <div className="cloningItemWrap">
               <div className='cloningBtn'>
-                <img className='up' src={up}  onClick={clickUp}  alt="up"></img>
-                <img className='down' src={down} onClick={clickDown} alt="down"></img>
+                <img className='up' src={up}  
+                onMouseOver={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+                onClick={clickUp}  alt="up"></img>
+                <img className='down' src={down} 
+                onMouseOver={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+                onClick={clickDown} alt="down"></img>
               </div>
-              <article className='cloningArticle'>
+              <article className="cloningArticle cloningArticle1">
                       <div className="cloningItem">
                         <div className={downOn1 ? "cloningBox cloningImgL" : "cloningBox cloningImgL downOn"}><img className="cloningImg" src={Cloning1} alt="Cloning1"></img></div> 
                         <div className={upOn1 ? "cloningBox cloningImgC" : "cloningBox cloningImgC upOn"}><img className="cloningImg" src={Cloning1} alt="Cloning1"></img></div> 
                         <div className={downOn1 ? "cloningBox cloningImgR" : "cloningBox cloningImgR downOn"}><img className="cloningImg"src={Cloning1} alt="Cloning1"></img></div> 
                       </div>
-                      <div className={upOn1 ? "cloningTit" : "cloningTit upOn"} 
+              </article>
+              <div className={upOn1 ? "cloningTit" : "cloningTit upOn"} 
                         onMouseOver={handleMouseEnter}
                         onMouseLeave={handleMouseLeave}
                         onClick={()=>{window.open("https://jeonwanjin.github.io/domino/")}}>domino's</div>
-              </article>
-              <article className={articleUp1 ? "cloningArticle" : "cloningArticle articleUp1"}>
+              <article className="cloningArticle cloningArticle2">
                       <div className="cloningItem">
                         <div className={downOn2 ? "cloningBox cloningImgL" : "cloningBox cloningImgL downOn"}><img className="cloningImg" src={Cloning2} alt="Cloning2"></img></div> 
                         <div className={upOn2 ? "cloningBox cloningImgC" : "cloningBox cloningImgC upOn"}><img className="cloningImg" src={Cloning2} alt="Cloning2"></img></div> 
@@ -208,7 +180,7 @@
                         onMouseLeave={handleMouseLeave}
                         onClick={()=>{window.open("https://jeonwanjin.github.io/dokdo/")}}>Dokdo</div>
               </article>
-              <article className={articleUp2 ? "cloningArticle" : "cloningArticle articleUp2"}>
+              <article className="cloningArticle cloningArticle3">
                       <div className="cloningItem">
                         <div className={downOn3 ? "cloningBox cloningImgL" : "cloningBox cloningImgL downOn"}><img className="cloningImg" src={Cloning3} alt="Cloning3"></img></div> 
                         <div className={upOn3 ? "cloningBox cloningImgC" : "cloningBox cloningImgC upOn"}><img className="cloningImg" src={Cloning3} alt="Cloning3"></img></div> 
@@ -219,13 +191,13 @@
                         onMouseLeave={handleMouseLeave}
                         onClick={()=>{window.open("https://jeonwanjin.github.io/SOCAR/")}}>SOCAR</div>
               </article>
-              <article className={articleUp3 ? "cloningArticle" : "cloningArticle articleUp3"}>
+              <article className={upOn4? "cloningArticle cloningArticle4" : "cloningArticle cloningArticle4 upOn4"}>
                       <div className="cloningItem">
-                        <div className={downOn4 ? "cloningBox cloningImgL" : "cloningBox cloningImgL downOn"}><img className="cloningImg" src={Cloning4} alt="Cloning3"></img></div> 
-                        <div className={upOn4 ? "cloningBox cloningImgC" : "cloningBox cloningImgC upOn"}><img className="cloningImg" src={Cloning4} alt="Cloning3"></img></div> 
-                        <div className={downOn4 ? "cloningBox cloningImgR" : "cloningBox cloningImgR downOn"}><img className="cloningImg"src={Cloning4} alt="Cloning3"></img></div> 
+                        <div className="cloningBox cloningImgL"><img className="cloningImg" src={Cloning4} alt="Cloning4"></img></div> 
+                        <div className="cloningBox cloningImgC"><img className="cloningImg" src={Cloning4} alt="Cloning4"></img></div> 
+                        <div className="cloningBox cloningImgR"><img className="cloningImg"src={Cloning4} alt="Cloning4"></img></div> 
                       </div>
-                      <div className={upOn4 ? "cloningTit" : "cloningTit upOn"} 
+                      <div className="cloningTit" 
                         onMouseOver={handleMouseEnter}
                         onMouseLeave={handleMouseLeave}
                         onClick={()=>{window.open("https://jeonwanjin.github.io/kolon/")}}>kolon</div>
@@ -235,5 +207,5 @@
         </div>
       );
   };
-  
+    
   export default Section3;
