@@ -213,13 +213,13 @@ const Section3 = ({ updateShowClick }) => {
                       <div className={titOn3 ? "cloningTit" : "cloningTit titOn"} 
                       onMouseOver={handleMouseEnter}
                       onMouseLeave={handleMouseLeave}
-                      onClick={()=>{window.open("https://jeonwanjin.github.io/domino/")}}>domino's</div>
+                      onClick={()=>{window.open("https://jeonwanjin.github.io/domino/")}}>Domino's</div>
             </article>
             <article className={articleOn4? "cloningArticle cloningArticle4" : "cloningArticle cloningArticle4 articleOn"}>
                       <div className={titOn4 ? "cloningTit" : "cloningTit titOn"} 
                       onMouseOver={handleMouseEnter}
                       onMouseLeave={handleMouseLeave}
-                      onClick={()=>{window.open("https://jeonwanjin.github.io/kolon/")}}>kolon</div>
+                      onClick={()=>{window.open("https://jeonwanjin.github.io/kolon/")}}>Kolon</div>
                       <div className="cloningBox4"><img className="cloningImg" src={Cloning4} alt="Cloning4"></img></div> 
             </article>
             </div>
