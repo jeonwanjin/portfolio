@@ -1,6 +1,5 @@
 import '../css/section3.css'
 import { useState,useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import Cloning1 from "../img/cloning1.png";
 import Cloning2 from "../img/cloning2.png";
 import Cloning3 from "../img/cloning3.png";
@@ -12,6 +11,7 @@ import down from "../img/down.png"
 const Section3 = ({ updateShowClick }) => {
 
   const [showCloning,setShowCloning] = useState(true);
+  const [showCloningWrap,setShowCloningWrap] = useState(true);
   const [upOn1,setUpOn1] = useState(true);
   const [downOn1,setDownOn1] = useState(true);
   const [upOn2,setUpOn2] = useState(true);
@@ -167,8 +167,10 @@ const Section3 = ({ updateShowClick }) => {
   
       if(scrollY >= 3000){
         setShowCloning(false);
+        setShowCloningWrap(false);
       }else{
         setShowCloning(true);
+        setShowCloningWrap(true);
       }
 
     };
@@ -186,7 +188,7 @@ const Section3 = ({ updateShowClick }) => {
         <div className={showCloning ? "cloning" : "cloning cloningOn"}  >
             <p>Cloning</p> 
         </div>
-        <div className='flex'>
+        <div className={showCloningWrap ? "Cloningflex" : "Cloningflex cloningItemWrapOn"}>
           <div className="cloningItemWrap">
             <div className='cloningBtn'>
               <img className={upClick ? 'up' : 'up clickUp'}

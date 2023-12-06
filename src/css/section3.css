@@ -23,8 +23,12 @@
   }
   100%{
       opacity: 1;
-      transform: translateY(0px);
+      transform: translateX(0px);
   }
+}
+.Cloningflex{
+  display: flex;
+  transform: translateY(300px);
 }
 .cloningItemWrap{
   position: relative;
@@ -33,6 +37,18 @@
   height: 900px;
   margin: 0 auto;
   overflow: hidden;
+}
+.cloningItemWrapOn{
+  animation: cloningItemWrapOn 1s linear forwards;
+}
+@keyframes cloningItemWrapOn {
+  0%{
+      opacity: 0;
+  }
+  100%{
+      opacity: 1;
+      transform: translateY(0px);
+  }
 }
 .cloningArticle{
   position:absolute;
@@ -61,6 +77,7 @@
   display: flex;
   width: 1720px;
   height: 900px;
+  
 }
 .cloningImg{
   position: relative;
@@ -70,6 +87,7 @@
   height: 900px;
   object-fit:cover;
   transition: 1s;
+  
 } 
 .cloningBox{
   top:0;
