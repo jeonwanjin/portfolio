@@ -2,6 +2,7 @@ import { Routes, Route} from 'react-router-dom';
 import { useState } from 'react';
 import Main from './components/main';
 import Header from './components/header';
+import Footer from './components/footer';
 import './css/App.css'
 import './css/reset.css'
 
@@ -28,6 +29,7 @@ function App() {
         <Routes>
           <Route exact path='/portfolio' element={<Main position={position} showClick={showClick} updateShowClick={updateShowClick} />}/>
         </Routes>
+        <Footer position={position} showClick={showClick} updateShowClick={updateShowClick}/>
       </div>
     </div>
   );

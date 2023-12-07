@@ -57,13 +57,13 @@ const Header = ({ position, showClick, updateShowClick }  ) => {
       window.scrollTo({ top: 1900, behavior: 'smooth' });
     };
     const handleCloningClick = () => {
-      window.scrollTo({ top: 4700, behavior: 'smooth' });
+      window.scrollTo({ top: 4550, behavior: 'smooth' });
     };
     const handleAboutClick = () => {
       window.scrollTo({ top: 1050, behavior: 'smooth' });
     };
     const handleContactClick = () => {
-      window.scrollTo({ top: 1800, behavior: 'smooth' });
+      window.scrollTo({ top: 5500, behavior: 'smooth' });
     };
 
     return (  
