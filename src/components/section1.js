@@ -76,7 +76,7 @@ const Section1 = ({ updateShowClick }) => {
             <p>Phone: 010-5009-4223</p>
             <p>E-mail: jwj1212121@gmail.com</p>
           </div>
-          <Link to="/AboutMe">
+          <Link to="/AboutMe" target="_blank">
           <button  className={showAboutBtn ? "aboutBtn" : "aboutBtn aboutBtnOn"}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave} >
