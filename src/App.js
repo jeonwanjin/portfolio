@@ -6,7 +6,6 @@ import Header from './components/header';
 import Footer from './components/footer';
 import './css/App.css'
 import './css/reset.css'
-
 import SubProject1 from './components/subProject1';
 import SubProject2 from './components/subProject2';
 import SubProject3 from './components/subProject3';

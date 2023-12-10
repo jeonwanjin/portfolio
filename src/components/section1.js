@@ -11,10 +11,9 @@ const Section1 = ({ updateShowClick }) => {
   const [showAboutBtn,setshowAboutBtn] = useState(true);
   const [ArrowOn,setArrowOn] = useState(false);
 
-  const handleLinkClick = () => {
-    window.location.reload();
-    window.location.href = "/AboutMe";
-  };
+  // const handleLinkClick = () => {
+  //   window.location.href = "/AboutMe";
+  // };
   
   const handleMouseEnter = () => {
     updateShowClick(false)
@@ -77,7 +76,7 @@ const Section1 = ({ updateShowClick }) => {
             <p>Phone: 010-5009-4223</p>
             <p>E-mail: jwj1212121@gmail.com</p>
           </div>
-          <Link to="/AboutMe"  onClick={handleLinkClick}>
+          <Link to="/AboutMe">
           <button  className={showAboutBtn ? "aboutBtn" : "aboutBtn aboutBtnOn"}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave} >

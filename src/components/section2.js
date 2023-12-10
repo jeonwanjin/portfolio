@@ -58,7 +58,7 @@ const Section2 = ({ updateShowClick }) => {
                    onMouseEnter={() => handleMouseEnter(index)}
                    onMouseLeave={handleMouseLeave}
                   >
-                    <Link to={`/${item.link}`} target="_blank">
+                    <Link to={`/${item.link}`}>
                     <img className={`projectImg ${hoveredItem === index ? 'projectHover' : ''}`} src={require(`../img/${item.img}.png`)} alt={item.img}></img>
                     </Link>
                   </div>
