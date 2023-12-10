@@ -3,7 +3,6 @@ import { useState,useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Project from "./project.json";
 
-
 const Section2 = ({ updateShowClick }) => {
 
   const [showAticle,setShowAticle] = useState(true);
@@ -19,7 +18,6 @@ const Section2 = ({ updateShowClick }) => {
     updateShowClick(true);
     setHoveredItem(null);
   };
-
   
   useEffect(() => { 
   
@@ -60,7 +58,9 @@ const Section2 = ({ updateShowClick }) => {
                    onMouseEnter={() => handleMouseEnter(index)}
                    onMouseLeave={handleMouseLeave}
                   >
+                    <Link to={`/${item.link}`} target="_blank">
                     <img className={`projectImg ${hoveredItem === index ? 'projectHover' : ''}`} src={require(`../img/${item.img}.png`)} alt={item.img}></img>
+                    </Link>
                   </div>
                   <div className="projecTit">{item.title}</div>
                   <div className="projecTxt">{item.text}</div>

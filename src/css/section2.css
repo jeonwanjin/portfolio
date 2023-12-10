@@ -24,7 +24,6 @@
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
-  
 }
 .projectItemWrap{
     width: 100%;
@@ -49,7 +48,7 @@
 .projecTxt{
     font-size: 18px;
     font-weight: 600;
-    margin-bottom: 100px;
+    margin-bottom: 100px;   
 }
 .projectItemContainer{
     opacity: 0;

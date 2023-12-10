@@ -1,19 +1,16 @@
 import '../css/header.css'
 import logo from '../img/logo.png'
 import logo2 from '../img/logo2.png'
-import { useState,useEffect,useRef } from 'react';
-import { Link } from 'react-router-dom';
-const Header = ({ position, showClick, updateShowClick }  ) => {
+import { useState,useEffect } from 'react';
+import { Link  } from 'react-router-dom';
+const Header = ({ position, showClick, updateShowClick ,isAboutMeRoute}) => {
 
   const [showLogo2,setShowLogo2] = useState(false);
   const [hideCat,sethideCat] = useState(false);
-  const headerRef = useRef(null);
   const [scrollPosition, setScrollPosition] = useState(0);
 
-
-  const handleLinkClick = () => {
-    window.location.reload();
-    window.location.href = "/portfolio";
+  const clickDown = () =>{
+    window.location.replace("/portfolio")
   };
 
   const handleMouseEnter = () => {
@@ -54,29 +51,40 @@ const Header = ({ position, showClick, updateShowClick }  ) => {
     }, []);
 
     const handleProjectClick = () => {
-      window.scrollTo({ top: 1900, behavior: 'smooth' });
+      if (!isAboutMeRoute) {
+        window.scrollTo({ top: 1900, behavior: 'smooth' });
+        };        
     };
     const handleCloningClick = () => {
-      window.scrollTo({ top: 4550, behavior: 'smooth' });
+      if (!isAboutMeRoute) {
+        window.scrollTo({ top: 4550, behavior: 'smooth' });
+        };      
     };
     const handleAboutClick = () => {
-      window.scrollTo({ top: 1050, behavior: 'smooth' });
+      if (!isAboutMeRoute) {
+        window.scrollTo({ top: 1050, behavior: 'smooth' });
+        };    
+      if(isAboutMeRoute){
+        window.location.replace("/AboutMe")
+      }
     };
     const handleContactClick = () => {
-      window.scrollTo({ top: 5500, behavior: 'smooth' });
+      if (!isAboutMeRoute) {
+        window.scrollTo({ top: 5500, behavior: 'smooth' });
+        };    
     };
 
     return (  
       <div className="headerWrap">
         <header className='header'>
           
-        <Link to="/portfolio"  onClick={handleLinkClick}>
+        <Link to="/portfolio" onClick={clickDown}>
             <h1 className={hideCat ? "logo2" : "logo"} 
                   onMouseOver={handleMouseEnter}
                   onMouseLeave={handleMouseLeave}
             >
               <img src={showLogo2 ? logo2 : logo} alt="intro"></img>
-            </h1>
+            </h1> 
         </Link>
             <ul className='nav' >
                     <li  

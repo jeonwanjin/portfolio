@@ -4,37 +4,43 @@
         "img": "projectImg1",
         "title": "Gyeongbokgung Festival",
         "text": "Team Project / React / JSX / THREE.JS / CSS / 3D Modeling&TextureMap ",
-        "bgColor":"#3C3C3C"
+        "bgColor":"#3C3C3C",
+        "link":"SubProject1"
       },
       {
         "img": "projectImg2",
         "title": "E-book",
         "text": "Team Project / React / JSX / THREE.JS / CSS / Figma / 3D Modeling   ",
-        "bgColor":"#83A78C"
+        "bgColor":"#83A78C",
+        "link":"SubProject2"
       },
       {
         "img": "projectImg3",
         "title": "Portfolio",
         "text": "Personal Project / React / JSX / THREE.JS / CSS ",
-        "bgColor":"#FFF0CE"
+        "bgColor":"#FFF0CE",
+        "link":"SubProject3"
       },
       {
         "img": "projectImg4",
         "title": "Gwangju Country Club",
         "text": "Personal Project / HTML / CSS / JavaScript / Figma",
-        "bgColor":"#A0372A"
+        "bgColor":"#A0372A",
+        "link":"SubProject4"
       },
       {
         "img": "projectImg6",
         "title": "미니게임준비중",
         "text": "Personal Project / React / JSX / CSS ",
-        "bgColor":"#102045"
+        "bgColor":"#102045",
+        "link":"SubProject5"
       },
       {
         "img": "projectImg6",
         "title": "Dictionary",
         "text": "Personal Project / React / JSX / CSS ",
-        "bgColor":"#102045"
+        "bgColor":"#102045",
+        "link":"SubProject6"
       }
     ]
   }

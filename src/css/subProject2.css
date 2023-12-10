@@ -1,0 +1,14 @@
+.subProject2{
+  position: relative;
+  width:90%; 
+  height: 1000px;
+  margin: 0 auto;
+  margin-top: 40px;
+  z-index: 1;
+  background-color: blue;
+}
+.subProject2>p{
+  font-size: 49px;
+  color: yellow;
+  
+}

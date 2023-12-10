@@ -68,7 +68,6 @@ const Main = ({ position, showClick, updateShowClick }) => {
   
     return (  
       <div className="main">
-  
         <div className='intro'>
           <img 
           src={showIntro4 ? intro4 : (showIntro3 ? intro3 : (showIntro2 ? intro2 : intro))} alt="intro"
