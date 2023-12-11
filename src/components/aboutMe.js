@@ -1,9 +1,9 @@
 import '../css/aboutMe.css'
-import { Routes, Route} from 'react-router-dom';
-import { useState,useEffect } from 'react';
+import { useEffect } from 'react';
 
-const AboutMe = ({ position, showClick, updateShowClick }) => {
+const AboutMe = ({updateShowClick }) => {
 
+    
 
     const handleMouseEnter = () => {
       updateShowClick(false)
@@ -15,6 +15,11 @@ const AboutMe = ({ position, showClick, updateShowClick }) => {
 
 
     useEffect(() => { 
+
+      window.scrollTo(0, 0);
+ 
+     
+
       const handleScroll = () => {
           const scrollY = window.pageYOffset;
 
@@ -28,7 +33,7 @@ const AboutMe = ({ position, showClick, updateShowClick }) => {
 
         };
       }, []);
-
+  
   
     return (  
       <div className="subAboutMe">

@@ -29,15 +29,15 @@ function App() {
     <div className="App">
       <div onMouseMove={handleMouseMove}>
       <div className={showClick ? "click" : "click clickOn"} style={{ position: 'absolute', left: `${position.x}px`, top: `${position.y}px`}}></div>
-        <Header position={position} showClick={showClick} updateShowClick={updateShowClick} isAboutMeRoute={location.pathname === '/AboutMe'} />
+        <Header position={position} showClick={showClick} updateShowClick={updateShowClick} isAboutMeRoute={location.pathname === '/AboutMe'}/>
           <Routes>
             <Route exact path="/portfolio" element={<Main position={position} showClick={showClick} updateShowClick={updateShowClick} />} />
             <Route exact path="/AboutMe" element={<AboutMe position={position} showClick={showClick} updateShowClick={updateShowClick} />} />
             {SubProjectSon.items.map((item, index) => (
-              <Route key={index} exact path={`/${item.link}`} element={<SubProject position={position} showClick={showClick} updateShowClick={updateShowClick} tit={item.title} />} />
+              <Route key={index} exact path={`/${item.link}`} element={<SubProject position={position} showClick={showClick} updateShowClick={updateShowClick} tit={item.title}/>} isSubProjectRoute={location.pathname === `/${item.link}`}/>
             ))}    
           </Routes>
-        <Footer position={position} showClick={showClick} updateShowClick={updateShowClick}/>
+        <Footer position={position} showClick={showClick} updateShowClick={updateShowClick} isAboutMeRoute={location.pathname === '/AboutMe'}/>
       </div>
     </div>
   );

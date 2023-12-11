@@ -4,7 +4,7 @@ import git from "../img/git.png";
 import mail from "../img/mail.png";
 import tel from "../img/tel.png";
 
-const Footer = ({ position, showClick, updateShowClick }  ) => {
+const Footer = ({ updateShowClick,isAboutMeRoute }  ) => {
 
   const [showContact,setShowContact] = useState(false);
   const [showContactTxt,setShowContactTxt] = useState(false);
@@ -33,14 +33,30 @@ const Footer = ({ position, showClick, updateShowClick }  ) => {
 
 
         const scrollY = window.pageYOffset;
-    
-        if(scrollY >= 5000){
-          setShowContact(false);
-          setShowContactTxt(false);
-        }else{
-          setShowContact(true);
-          setShowContactTxt(true);
-        }
+      
+        if (!isAboutMeRoute) {
+
+          if(scrollY >= 5000){
+            setShowContact(false);
+            setShowContactTxt(false);
+          }else{
+            setShowContact(true);
+            setShowContactTxt(true);
+          }
+
+        };    
+        if (isAboutMeRoute) {
+
+          if(scrollY >= 1000){
+            setShowContact(false);
+            setShowContactTxt(false);
+          }else{
+            setShowContact(true);
+            setShowContactTxt(true);
+          }
+
+        };    
+     
 
       };
       
@@ -51,7 +67,7 @@ const Footer = ({ position, showClick, updateShowClick }  ) => {
       window.removeEventListener('scroll', handleScroll);
 
       };
-    }, []);
+    }, [isAboutMeRoute]);
 
  
     return (  

@@ -3,7 +3,7 @@ import logo from '../img/logo.png'
 import logo2 from '../img/logo2.png'
 import { useState,useEffect } from 'react';
 import { Link  } from 'react-router-dom';
-const Header = ({ position, showClick, updateShowClick ,isAboutMeRoute}) => {
+const Header = ({ updateShowClick ,isAboutMeRoute}) => {
 
   const [showLogo2,setShowLogo2] = useState(false);
   const [hideCat,sethideCat] = useState(false);

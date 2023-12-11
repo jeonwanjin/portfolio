@@ -14,7 +14,7 @@ import Section3 from './section3';
 
 
 
-const Main = ({ position, showClick, updateShowClick }) => {
+const Main = ({updateShowClick}) => {
 
     const [animationOn, setAnimationOn] = useState(true);
     const [isMonitorOn, setMonitorOn] = useState(true);
