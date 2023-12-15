@@ -21,6 +21,9 @@
   display: flex;
   z-index: -1;
 }
+.justi{
+  justify-content: space-between;
+}
 .click{
   width: 30px;
   height: 30px;
@@ -52,4 +55,17 @@
   100%{
     opacity: 1;
   }
+}
+
+.font800{
+  font-weight: 800;
+}
+.maginTop50{
+  margin-top: 50px;
+}
+.maginTop20{
+  margin-top: 20px;
+}
+.maginTop60{
+  margin-top: 60px;
 }

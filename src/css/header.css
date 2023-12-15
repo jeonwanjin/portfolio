@@ -38,11 +38,15 @@
     display:flex;
 }
 .nav li{
+    height: 40px;
     font-weight: bold;
     font-size: 32px;
     margin: 0 21px;
 }
 
+.liOn{
+    border-bottom: 4px solid black;
+}
 
 @media screen and (max-width:1024px){
     .nav li{

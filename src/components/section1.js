@@ -11,10 +11,6 @@ const Section1 = ({ updateShowClick }) => {
   const [showAboutBtn,setshowAboutBtn] = useState(true);
   const [ArrowOn,setArrowOn] = useState(false);
 
-  // const handleLinkClick = () => {
-  //   window.location.href = "/AboutMe";
-  // };
-  
   const handleMouseEnter = () => {
     updateShowClick(false)
     setArrowOn(true);
