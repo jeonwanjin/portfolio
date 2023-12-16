@@ -25,12 +25,12 @@
 }
 .aboutMeOn{
     opacity: 1;
-    transition: 2s ease-in-out;
+    transition: 1.2s ease-in-out;
     transform: translateX(0px);
 }
 .aboutMe2On{
     opacity: 1;
-    transition: 2s ease-in-out;
+    transition: 1.2s ease-in-out;
     transform: translateX(305px);
 }
 .aboutMeRp{
@@ -40,7 +40,7 @@
     margin-bottom: 50px;
     padding: 10px;
     opacity: 0;
-    transition: 1s ease-in;
+    transition: 0.7s ease-in;
     transform: translateY(400px);
 }
 .aboutMeRpOn{
@@ -68,7 +68,7 @@
     cursor: none;
 }
 .aboutBtnOn{
-    animation:btnOn 1s linear forwards;
+    animation:btnOn 0.7s linear forwards;
 }
 .arrow{
     margin-left: 100px;

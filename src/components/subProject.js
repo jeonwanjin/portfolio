@@ -1,9 +1,11 @@
 import React from 'react';
-import { useEffect  } from 'react';
-import "../css/subProject1.css"
+import { useEffect,useState} from 'react';
+import "../css/subProject.css"
 
-const SubProject = ({updateShowClick,tit }) => {
-  
+
+const SubProject = ({updateShowClick,bgImg,bgColor,subTit,subtext,subtext2,subtext3}) => {
+
+  const [showSubTit,setShowSubTit] = useState(true);
 
   const handleMouseEnter = (index) => {
     updateShowClick(false);
@@ -15,13 +17,14 @@ const SubProject = ({updateShowClick,tit }) => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    updateShowClick(true);
+    setShowSubTit(false);
 
     const handleScroll = () => {
       const scrollY = window.pageYOffset;
-      // 스크롤 이벤트 핸들링 로직 추가
     };
 
-    window.addEventListener('scroll', handleScroll);
+      window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
@@ -29,34 +32,16 @@ const SubProject = ({updateShowClick,tit }) => {
 
   return (
       <div className='subProject'>
-        <p>{tit}</p>
-        <p>{tit}</p>
-        <p>{tit}</p>
-        <p>{tit}</p>
-        <p>{tit}</p>
-        <p>{tit}</p><p>{tit}</p>
-        <p>{tit}</p>
-        <p>{tit}</p><p>{tit}</p>
-        <p>{tit}</p>
-        <p>{tit}</p>
-        <p>{tit}</p>
-        <p>{tit}</p>
-        <p>{tit}</p>
-        <p>{tit}</p>
-        <p>{tit}</p>
-        <p>{tit}</p>
-        <p>{tit}</p>
-        <p>{tit}</p>
-        <p>{tit}</p>
-        <p>{tit}</p>
-        <p>{tit}</p>
-        <p>{tit}</p>
-        <p>{tit}</p>
-        <p>{tit}</p><p>{tit}</p>
-        <p>{tit}</p>
-        <p>{tit}</p>
-        <p>{tit}</p>
-
+        <div className='subIntro' style={{ backgroundColor: bgColor}}>
+          <img src={require(`../img/${bgImg}.png`)} alt='bgImg'/>
+        </div>
+        <div className='subMain'>
+          <p className={showSubTit ? "subTit" : "subTit subTitOn"}>{subTit}</p>
+          <p className='aboutProject'>About Project</p>
+          <p className='subtext'>{subtext}</p>
+          <p className='subtext2'>{subtext2}</p>
+          <p className='subtext2'>{subtext3}</p>
+        </div>
       </div>
     )
 };

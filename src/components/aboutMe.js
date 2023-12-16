@@ -14,6 +14,7 @@ import icon3dmax from '../img/icon3dmax.png'
 
 const AboutMe = ({updateShowClick }) => {
 
+
     
 
     const handleMouseEnter = () => {
@@ -28,7 +29,7 @@ const AboutMe = ({updateShowClick }) => {
     useEffect(() => { 
 
       window.scrollTo(0, 0);
- 
+      updateShowClick(true)
      
 
       const handleScroll = () => {

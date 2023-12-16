@@ -34,7 +34,13 @@ function App() {
             <Route exact path="/portfolio" element={<Main position={position} showClick={showClick} updateShowClick={updateShowClick} />} />
             <Route exact path="/AboutMe" element={<AboutMe position={position} showClick={showClick} updateShowClick={updateShowClick} />} />
             {SubProjectSon.items.map((item, index) => (
-              <Route key={index} exact path={`/${item.link}`} element={<SubProject position={position} showClick={showClick} updateShowClick={updateShowClick} tit={item.title}/>} isSubProjectRoute={location.pathname === `/${item.link}`}/>
+              <Route key={index} exact path={`/${item.link}`} element={<SubProject 
+                
+                position={position} showClick={showClick} updateShowClick={updateShowClick} 
+                subTit={item.title} subtext={item.text} subtext2={item.text2} subtext3={item.text3} bgColor={item.bgColor} bgImg={item.img}
+
+                />} 
+                isSubProjectRoute={location.pathname === `/${item.link}`}/>
             ))}    
           </Routes>
         <Footer position={position} showClick={showClick} updateShowClick={updateShowClick} isAboutMeRoute={location.pathname === '/AboutMe'}/>

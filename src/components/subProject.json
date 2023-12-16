@@ -3,37 +3,55 @@
       {
         "img": "projectImg1",
         "title": "Gyeongbokgung Festival",
-        "text": "Team Project / React / JSX / THREE.JS / CSS / 3D Modeling&TextureMap ",
+        "text": "경복궁 행사 중 하나인 경복궁 :별빛야행을 주제로 행사를 소개하는 웹사이트를 만들어보았습니다.",
+        "text2":"기존의 여러 축제사이트를 벤치마킹하였고 webGL을 활용하여 사이트를 완성하는 것이 목표였기 때문에 별빛 야행 축제 포스터의 이미지를 3d로 제작하여 홈페이지의 메인에 장식하였습니다.",
+        "text3":"이번 팀 프로젝트에서 담당한 부분은 3d배경 제작과 경복궁 근정전의 3d모델링과 텍스처맵 제작 그리고 메인프로그램 섹션과 서브페이지 , 커뮤니티 섹션과 FAQ페이지,갤러리 페이지입니다.",
         "bgColor":"#3C3C3C",
-        "link":"SubProject1",
-        "component":"1"
+        "link":"SubProject1"
       },
       {
         "img": "projectImg2",
         "title": "E-book",
-        "text": "Team Project / React / JSX / THREE.JS / CSS / Figma / 3D Modeling   ",
+        "text": "경복궁 행사 중 하나인 경복궁 :별빛야행을 주제로 행사를 소개하는 웹사이트를 만들어보았습니다.",
+        "text2":"기존의 여러 축제사이트를 벤치마킹하였고 webGL을 활용하여 사이트를 완성하는 것이 목표였기 때문에 별빛 야행 축제 포스터의 이미지를 3d로 제작하여 홈페이지의 메인에 장식하였습니다.",
+        "text3":"이번 팀 프로젝트에서 담당한 부분은 3d배경 제작과 경복궁 근정전의 3d모델링과 텍스처맵 제작 그리고 메인프로그램 섹션과 서브페이지 , 커뮤니티 섹션과 FAQ페이지,갤러리 페이지입니다.",
         "bgColor":"#83A78C",
-        "link":"SubProject2",
-        "component":"2"
+        "link":"SubProject2"
       },
       {
+        "img": "projectImg3",
         "title": "Portfolio",
-        "text": "Personal Project / React / JSX / THREE.JS / CSS ",
+        "text": "경복궁 행사 중 하나인 경복궁 :별빛야행을 주제로 행사를 소개하는 웹사이트를 만들어보았습니다.",
+        "text2":"기존의 여러 축제사이트를 벤치마킹하였고 webGL을 활용하여 사이트를 완성하는 것이 목표였기 때문에 별빛 야행 축제 포스터의 이미지를 3d로 제작하여 홈페이지의 메인에 장식하였습니다.",
+        "text3":"이번 팀 프로젝트에서 담당한 부분은 3d배경 제작과 경복궁 근정전의 3d모델링과 텍스처맵 제작 그리고 메인프로그램 섹션과 서브페이지 , 커뮤니티 섹션과 FAQ페이지,갤러리 페이지입니다.",
+        "bgColor":"#FFF0CE",
         "link":"SubProject3"
       },
       {
+        "img": "projectImg4",
         "title": "Gwangju Country Club",
-        "text": "Personal Project / HTML / CSS / JavaScript / Figma",
+        "text": "경복궁 행사 중 하나인 경복궁 :별빛야행을 주제로 행사를 소개하는 웹사이트를 만들어보았습니다.",
+        "text2":"기존의 여러 축제사이트를 벤치마킹하였고 webGL을 활용하여 사이트를 완성하는 것이 목표였기 때문에 별빛 야행 축제 포스터의 이미지를 3d로 제작하여 홈페이지의 메인에 장식하였습니다.",
+        "text3":"이번 팀 프로젝트에서 담당한 부분은 3d배경 제작과 경복궁 근정전의 3d모델링과 텍스처맵 제작 그리고 메인프로그램 섹션과 서브페이지 , 커뮤니티 섹션과 FAQ페이지,갤러리 페이지입니다.",
+        "bgColor":"#A0372A",
         "link":"SubProject4"
       },
       {
+        "img": "projectImg6",
         "title": "미니게임준비중",
-        "text": "Personal Project / React / JSX / CSS ",
+        "text": "경복궁 행사 중 하나인 경복궁 :별빛야행을 주제로 행사를 소개하는 웹사이트를 만들어보았습니다.",
+        "text2":"기존의 여러 축제사이트를 벤치마킹하였고 webGL을 활용하여 사이트를 완성하는 것이 목표였기 때문에 별빛 야행 축제 포스터의 이미지를 3d로 제작하여 홈페이지의 메인에 장식하였습니다.",
+        "text3":"이번 팀 프로젝트에서 담당한 부분은 3d배경 제작과 경복궁 근정전의 3d모델링과 텍스처맵 제작 그리고 메인프로그램 섹션과 서브페이지 , 커뮤니티 섹션과 FAQ페이지,갤러리 페이지입니다.",
+        "bgColor":"#102045",
         "link":"SubProject5"
       },
       {
+        "img": "projectImg6",
         "title": "Dictionary",
-        "text": "Personal Project / React / JSX / CSS ",
+        "text": "경복궁 행사 중 하나인 경복궁 :별빛야행을 주제로 행사를 소개하는 웹사이트를 만들어보았습니다.",
+        "text2":"기존의 여러 축제사이트를 벤치마킹하였고 webGL을 활용하여 사이트를 완성하는 것이 목표였기 때문에 별빛 야행 축제 포스터의 이미지를 3d로 제작하여 홈페이지의 메인에 장식하였습니다.",
+        "text3":"이번 팀 프로젝트에서 담당한 부분은 3d배경 제작과 경복궁 근정전의 3d모델링과 텍스처맵 제작 그리고 메인프로그램 섹션과 서브페이지 , 커뮤니티 섹션과 FAQ페이지,갤러리 페이지입니다.",
+        "bgColor":"#102045",
         "link":"SubProject6"
       }
     ]

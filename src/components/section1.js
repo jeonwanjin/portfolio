@@ -31,11 +31,11 @@ const Section1 = ({ updateShowClick }) => {
           setshowAboutR(true);
           setTimeout(() => {
             setshowAboutRp(false);
-          }, 2000);
+          }, 1500);
              
           setTimeout(() => {
             setshowAboutBtn(false);
-          }, 3000);  
+          }, 2500);  
         }else{
           setshowAboutL(false);
           setshowAboutR(false);
