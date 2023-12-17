@@ -38,6 +38,8 @@ function App() {
                 
                 position={position} showClick={showClick} updateShowClick={updateShowClick} 
                 subTit={item.title} subtext={item.text} subtext2={item.text2} subtext3={item.text3} bgColor={item.bgColor} bgImg={item.img}
+                bgImg2={item.img2} bgImg3={item.img3} bgImg4={item.img4} bgImg5={item.img5} bgImg6={item.img6}
+                subDate={item.date} subUrl={item.url} subtext4={item.text4}
 
                 />} 
                 isSubProjectRoute={location.pathname === `/${item.link}`}/>
