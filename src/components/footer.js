@@ -36,7 +36,7 @@ const Footer = ({ updateShowClick,isAboutMeRoute }  ) => {
       
         if (!isAboutMeRoute) {
 
-          if(scrollY >= 5000){
+          if(scrollY >= 4000){
             setShowContact(false);
             setShowContactTxt(false);
           }else{

@@ -26,27 +26,25 @@ function App() {
   };
   
   return (
-    <div className="App">
-      <div onMouseMove={handleMouseMove}>
+    <div className="App" onMouseMove={handleMouseMove}>
       <div className={showClick ? "click" : "click clickOn"} style={{ position: 'absolute', left: `${position.x}px`, top: `${position.y}px`}}></div>
         <Header position={position} showClick={showClick} updateShowClick={updateShowClick} isAboutMeRoute={location.pathname === '/AboutMe'}/>
           <Routes>
-            <Route exact path="/portfolio" element={<Main position={position} showClick={showClick} updateShowClick={updateShowClick} />} />
-            <Route exact path="/AboutMe" element={<AboutMe position={position} showClick={showClick} updateShowClick={updateShowClick} />} />
+            <Route path="/portfolio" element={<Main position={position} showClick={showClick} updateShowClick={updateShowClick} />} />
+            <Route path="/AboutMe" element={<AboutMe position={position} showClick={showClick} updateShowClick={updateShowClick} />} />
             {SubProjectSon.items.map((item, index) => (
-              <Route key={index} exact path={`/${item.link}`} element={<SubProject 
+              <Route key={index} path={`/${item.link}`} element={<SubProject 
                 
                 position={position} showClick={showClick} updateShowClick={updateShowClick} 
                 subTit={item.title} subtext={item.text} subtext2={item.text2} subtext3={item.text3} bgColor={item.bgColor} bgImg={item.img}
                 bgImg2={item.img2} bgImg3={item.img3} bgImg4={item.img4} bgImg5={item.img5} bgImg6={item.img6}
                 subDate={item.date} subUrl={item.url} subtext4={item.text4}
-
+   
                 />} 
-                isSubProjectRoute={location.pathname === `/${item.link}`}/>
+              />
             ))}    
           </Routes>
         <Footer position={position} showClick={showClick} updateShowClick={updateShowClick} isAboutMeRoute={location.pathname === '/AboutMe'}/>
-      </div>
     </div>
   );
 }

@@ -65,7 +65,7 @@ const Header = ({ updateShowClick ,isAboutMeRoute}) => {
     };
     const handleCloningClick = () => {
       if (!isAboutMeRoute) {
-        window.scrollTo({ top: 4550, behavior: 'smooth' });
+        window.scrollTo({ top: 3800, behavior: 'smooth' });
         setLiOn1(true)    
         setLiOn2(false)    
         setLiOn3(true)    
@@ -89,13 +89,12 @@ const Header = ({ updateShowClick ,isAboutMeRoute}) => {
     };
     const handleContactClick = () => {
       if (!isAboutMeRoute) {
-        window.scrollTo({ top: 5500, behavior: 'smooth' });
+        window.scrollTo({ top: 5000, behavior: 'smooth' });
         setLiOn1(true)    
         setLiOn2(true)    
         setLiOn3(true)    
         setLiOn4(false) 
-        }; 
-
+        };
     };
 
     return (  
