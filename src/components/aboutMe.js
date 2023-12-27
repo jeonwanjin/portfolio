@@ -80,10 +80,10 @@ const AboutMe = ({updateShowClick }) => {
                   <p>2020.12~2022.11</p><p>자영업</p>
                 </div>
                 <div className='flex justi'>
-                  <p>2019.03~2020.10</p><p>에이제이트레이드</p>
+                  <p>2017.03~2018.08</p><p>에이제이트레이드</p>
                 </div>
                 <div className='flex justi'>
-                  <p>2017.01~2018.02</p><p>나비스오토모티브시스템즈</p>
+                  <p>2016.01~2016.12</p><p>나비스오토모티브시스템즈</p>
                 </div>
               </div>
               <div className='flex justi'>
