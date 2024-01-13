@@ -13,6 +13,7 @@ const Header = ({ updateShowClick ,isAboutMeRoute}) => {
   const [liOn3,setLiOn3] = useState(true);
   const [liOn4,setLiOn4] = useState(true);
   const [hamOn,setHamOn] = useState(true);
+  const [hamClose,setHamClose] = useState(true);
   const [scrollPosition, setScrollPosition] = useState(0);
 
   const clickDown = () =>{
@@ -55,25 +56,25 @@ const Header = ({ updateShowClick ,isAboutMeRoute}) => {
     }, []);
 
     const handleProjectClick = () => {
-      
         setLiOn1(false)    
         setLiOn2(true)    
         setLiOn3(true)    
         setLiOn4(true)    
-           
+        setHamClose(false)   
     };
     const handleCloningClick = () => {
         setLiOn1(true)    
         setLiOn2(false)    
         setLiOn3(true)    
         setLiOn4(true) 
-    
+        setHamClose(false)   
     };
     const handleAboutClick = () => {
         setLiOn1(true)    
         setLiOn2(true)    
         setLiOn3(false)    
         setLiOn4(true)  
+        setHamClose(false)   
     };
 
     const handleContactClick = () => {
@@ -81,6 +82,7 @@ const Header = ({ updateShowClick ,isAboutMeRoute}) => {
         setLiOn2(true)    
         setLiOn3(true)    
         setLiOn4(false) 
+        setHamClose(false)   
     };
 
     const clickHam = () =>{
@@ -126,7 +128,7 @@ const Header = ({ updateShowClick ,isAboutMeRoute}) => {
                     onClick={clickHam}></div>
             </ul>
         </header>
-        <div className={hamOn? "openHam" : "openHam hamClick"}>
+        <div className={`openHam ${hamOn ? '' : 'hamClick'} ${hamClose ? '' : 'hamClose'}`}>
             <h1 className={"logo3"} 
                   onMouseOver={handleMouseEnter}
                   onMouseLeave={handleMouseLeave}
@@ -149,7 +151,7 @@ const Header = ({ updateShowClick ,isAboutMeRoute}) => {
             className='hamLi'
             onClick={handleAboutClick}
             onMouseOver={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}><Link to="/AboutMe" target="_blank">About me</Link></li>
+            onMouseLeave={handleMouseLeave}><Link to="/AboutMe">About me</Link></li>
             <li
             className='hamLi'
             onClick={handleContactClick}

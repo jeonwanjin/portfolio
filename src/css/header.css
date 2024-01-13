@@ -112,6 +112,10 @@ a{
     font-weight: bold;
     font-size: 48px;
 }
+.openHam.hamClick.hamClose{
+    display: none;
+}
+
 @keyframes openHam{
     0%{
        
