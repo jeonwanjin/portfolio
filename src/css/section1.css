@@ -8,14 +8,15 @@
 
 .aboutMe{
     padding-top: 100px;
-    font-size: 124px;
+    font-size: 6.45vw;
     font-weight: bold;
+    white-space: nowrap;
     transition: 1.2s ease-in-out;
 }
 .aboutMe2{
     padding-top: 200px;
-    margin-left: 305px;
-    font-size: 36px;
+    margin-left: 15.885vw;
+    font-size: 1.875vw;
     font-weight: bold;
 }
 .aboutMe2 p{
@@ -24,12 +25,12 @@
 .aboutMeRp{
     position: relative;
     margin-top: 50px;
-    margin-left: 820px;
+    margin-left:42.6vw;
     margin-bottom: 50px;
     padding: 10px;
 }
 .aboutMeRp p{
-    font-size: 24px;
+    font-size: 1.25vw;
     padding: 10px 0;
 }
 .aboutBtn{
@@ -39,7 +40,7 @@
     font-size: 36px;
     font-weight: bold;
     border: none;
-    margin-left:830px;
+    margin-left:43.229vw;
     height: 100px;
     font-weight: bold;
     white-space: nowrap;
@@ -67,3 +68,57 @@
         transform: translateX(0px);     
     }
 }
+
+
+@media screen and (max-width: 1280px) {
+    .aboutMe2{
+        padding-top: 100px;
+        font-size: 16px;
+        font-weight: bold;
+    }
+    .aboutMeRp p{
+        font-size: 16px;
+        padding: 5px 0;
+    }
+    .aboutMeRp{
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .aboutBtn{
+        width:200px;
+        padding-bottom:10px; 
+        font-size: 32px;
+        height: 80px;
+        border-bottom: 6px solid black;
+    }
+    .arrow{
+        margin-left: 80px;
+        width: 25px;
+        height: 25px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .aboutMeRp p{
+        font-size: 16px;
+        padding: 5px 0;
+    }
+    .aboutMeRp{
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    .aboutBtn{
+        width:160px;
+        padding-bottom:10px; 
+        font-size: 24px;
+        height: 60px;
+        border-bottom: 4px solid black;
+    }
+    .arrow{
+        margin-left:60px;
+        width: 20px;
+        height: 20px;
+    }
+    
+}
+

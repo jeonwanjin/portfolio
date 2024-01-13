@@ -17,13 +17,13 @@ const Footer = ({ updateShowClick }  ) => {
   };
 
   const mailClick = () => {
-    
     navigator.clipboard.writeText("jwj1212121@gmail.com");
     setShowMail(false);
   };
   const alertClose = () => {
     
     setShowMail(true);
+    
   };
 
     return (  

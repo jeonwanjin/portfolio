@@ -137,6 +137,11 @@ a{
     padding-top: 100px;
     padding-left: 100px;
 }
+.hamBot{    
+    text-align: center;
+    color: white;
+    margin-top: -70px;
+}
 
 @keyframes hamClick{
     0%{
@@ -176,11 +181,10 @@ a{
 
 }
 
-@media screen and (max-width: 768px) {
-
+@media screen and (min-width: 480px) and (max-width:768px){
+    .openHam{
+       display: block;
+       animation: openHam 0.5s linear forwards;
+    }
 }
   
-  
-@media screen and (max-width: 480px) {
-
-  }

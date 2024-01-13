@@ -2,6 +2,7 @@ import '../css/header.css'
 import logo from '../img/logo.png'
 import logo2 from '../img/logo2.png'
 import logo3 from '../img/logo3.png'
+import git from "../img/git.png";
 import { useState,useEffect } from 'react';
 import { Link } from 'react-router-dom';
 const Header = ({ updateShowClick ,isAboutMeRoute}) => {
@@ -157,7 +158,15 @@ const Header = ({ updateShowClick ,isAboutMeRoute}) => {
             onClick={handleContactClick}
             onMouseOver={handleMouseEnter}
             onMouseLeave={handleMouseLeave}><Link to="/Contact">Contact</Link></li>
+            
+            <div className='git'
+               onMouseOver={handleMouseEnter}
+               onMouseLeave={handleMouseLeave}
+               onClick={()=>{window.open("https://github.com/jeonwanjin")}}><img src={git} alt='git'></img><div>https://github.com/jeonwanjin</div>
+            </div>      
           </ul>
+     
+          <div className='hamBot'>©2023 Jeonwanjin portfolio</div>
         </div>
       </div>       
     );

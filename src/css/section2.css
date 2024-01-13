@@ -7,7 +7,7 @@
     width: 1720px;
 }
 .port{
-    font-size: 124px;
+    font-size: 6.45vw;
     font-weight: bold;
     margin-bottom: 100px;
 }
@@ -36,7 +36,7 @@
     transition: 0.7s;
 }
 .projecTit{
-    font-size: 36px;
+    font-size: 1.875vw;
     font-weight: bold;
     margin-bottom: 30px;
 }
@@ -45,9 +45,35 @@
     font-weight: 600;
     margin-bottom: 100px;   
 }
-.projectItemContainer{
-    
-}
+
 .projectHover{
     transform: scale(1.1);
+}
+
+
+@media screen and (max-width: 1280px) {
+    .projecTit{
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+    .projecTxt{
+        font-size: 16px;
+        margin-bottom: 30px;   
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .projecTit{
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+    .projecTxt{
+        margin-bottom: 15px;   
+    }
+    .projectItem{
+        width: 650px;
+        height: 450px;
+        margin-bottom: 15px;
+    }
+    
 }
