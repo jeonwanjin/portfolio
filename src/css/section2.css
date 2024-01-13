@@ -2,19 +2,14 @@
     position: relative;
     width: 100%;
     margin: 0 auto;
-    z-index: -1;
+}
+.w1720{
+    width: 1720px;
 }
 .port{
     font-size: 124px;
     font-weight: bold;
-    opacity: 0.2;
-    transition: 1.2s ease-in-out;
-    transform: translateX(1700px);
     margin-bottom: 100px;
-}
-.portOn{
-    opacity: 1;
-    transform: translateX(0px);
 }
 .projectArticle {
     width: 100%;
@@ -51,21 +46,8 @@
     margin-bottom: 100px;   
 }
 .projectItemContainer{
-    opacity: 0;
-    transform: translateY(100px);
-}
-.projectOn{
-    animation: projectOn 0.7s linear forwards;
+    
 }
 .projectHover{
     transform: scale(1.1);
-}
-@keyframes projectOn {
-    0%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
-        transform: translateY(0px);
-    }
 }

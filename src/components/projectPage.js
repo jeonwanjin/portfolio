@@ -1,9 +1,9 @@
 import '../css/section2.css'
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Project from "./project.json";
 
-const Section2 = ({ updateShowClick }) => {
+const ProjectPage = ({ updateShowClick }) => {
 
   const [hoveredItem, setHoveredItem] = useState(null);
   
@@ -17,8 +17,14 @@ const Section2 = ({ updateShowClick }) => {
     setHoveredItem(null);
   };
   
+  useEffect(() => { 
+    
+    window.scrollTo(0, 0);
+  
+    }, []);
+    
     return (  
-      <div className="section2">
+      <div className="section2 w1720 loaded">
         <div className="port">
             <p>Project</p> 
         </div>
@@ -27,7 +33,7 @@ const Section2 = ({ updateShowClick }) => {
             <div className="projectItemContainer">
               {Project.items.map((item, index) => (
                 <div key={index}>
-                  <div className="projectItem" style={{background:`${item.bgColor}`}}
+                  <div className="projectItemPage" style={{background:`${item.bgColor}`}}
                    onMouseEnter={() => handleMouseEnter(index)}
                    onMouseLeave={handleMouseLeave}
                   >
@@ -35,7 +41,7 @@ const Section2 = ({ updateShowClick }) => {
                     <img className={`projectImg ${hoveredItem === index ? 'projectHover' : ''}`} src={require(`../img/${item.img}.png`)} alt={item.img}></img>
                     </Link>
                   </div>
-                  <div className="projecTit">{item.title}</div>
+                  <div className="projecTit maginTop50">{item.title}</div>
                   <div className="projecTxt">{item.text}</div>
                 </div>
               ))}
@@ -46,4 +52,4 @@ const Section2 = ({ updateShowClick }) => {
     );
 };
  
-export default Section2;
+export default ProjectPage;

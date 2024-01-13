@@ -30,25 +30,12 @@ const AboutMe = ({updateShowClick }) => {
 
       window.scrollTo(0, 0);
       updateShowClick(true)
-     
-
-      const handleScroll = () => {
-          const scrollY = window.pageYOffset;
-
-        };
-
-        window.addEventListener('scroll', handleScroll);
-
-        return () => {
-
-        window.removeEventListener('scroll', handleScroll);
-
-        };
+    
       }, []);
   
   
     return (  
-      <div className="subAboutMe">
+      <div className="subAboutMe loaded">
         <div className="subAboutMeTit">
             <p>About Me</p> 
         </div>

@@ -38,18 +38,145 @@
     display:flex;
 }
 .nav li{
+    display: block;
     height: 40px;
     font-weight: bold;
     font-size: 32px;
     margin: 0 21px;
 }
+a{
+    text-decoration: none;
+    color: black;
+}
 
 .liOn{
     border-bottom: 4px solid black;
 }
-
-@media screen and (max-width:1024px){
-    .nav li{
-        font-size: 24px;
+.ham{
+    position: relative;
+    cursor: pointer;
+    display: none;
+    border: none;
+    z-index: 9999;
+}
+.ham::before{
+    position: absolute;
+    content: "";
+    top: 15px;
+    left: 0px;
+    width: 80px;
+    height: 10px;
+    transform-origin: 25%;
+    border-top: 6px solid black;
+}
+.ham::after{
+    position: absolute;
+    content: "";
+    top: 30px;
+    left: 0px;
+    width: 80px;
+    height: 10px;
+    transform-origin: 45%;
+    border-top: 6px solid black;
+}
+.openHam{
+    position: sticky;
+    margin-top: -200px;
+    width: 100vw;
+    height: 1000px;
+    background: black;
+    display: none;
+    transform: translateX(2000px);
+    z-index: 999;
+}
+.openHam.hamClick{
+    display: block;
+    animation: openHam 0.5s linear forwards;
+}
+.hamUl{
+    text-align: center;
+    padding-top: 100px;
+    width: 400px;
+    height: 600px;
+    margin: 0 auto;
+}
+.hamLi{
+    display: block;
+    width: 400px;
+    height: 40px;
+    margin-bottom: 50px;
+    z-index: 99999;
+}
+.hamLi a{
+    color: white;
+    font-weight: bold;
+    font-size: 48px;
+}
+@keyframes openHam{
+    0%{
+       
+    }
+    100%{
+        transform: translateX(0px);     
     }
 }
+
+.ham.hamClick::before{
+    border-top: 6px solid rgb(255, 255, 255);
+    animation: hamClick 0.5s linear forwards;
+}
+.ham.hamClick::after{
+    border-top: 6px solid rgb(255, 255, 255);
+    animation: hamClick2 0.5s linear forwards;
+}
+.logo3{
+    padding-top: 100px;
+    padding-left: 100px;
+}
+
+@keyframes hamClick{
+    0%{
+       
+    }
+    100%{
+        transform:rotate(43deg);
+    }
+}
+@keyframes hamClick2{
+    0%{
+       
+    }
+    100%{
+        transform:rotate(-43deg);
+    }
+}
+
+@media screen and (min-width: 1281px) {
+
+    .openHam.hamClick{
+        display: none;
+    }
+  }
+
+
+@media screen and (max-width: 1280px) {
+    .nav li{
+        display: none;
+    }
+    .ham{ 
+        display: block;
+    }
+  }
+
+@media screen and (max-width: 1024px) {
+
+}
+
+@media screen and (max-width: 768px) {
+
+}
+  
+  
+@media screen and (max-width: 480px) {
+
+  }

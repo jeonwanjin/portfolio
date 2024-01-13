@@ -1,9 +1,12 @@
 import { Routes, Route , useLocation} from 'react-router-dom';
 import { useState } from 'react';
-import Main from './components/main';
-import AboutMe from './components/aboutMe';
-import Header from './components/header';
-import Footer from './components/footer';
+import Main from './components/main.js';
+import AboutMe from './components/aboutMe.js';
+import Contact from './components/contact.js';
+import Cloning from './components/cloning.js';
+import ProjectPage from './components/projectPage.js';
+import Header from './components/header.js';
+import Footer from './components/footer.js';
 import './css/App.css'
 import './css/reset.css'
 import SubProjectSon from './components/subProject.json'
@@ -31,7 +34,11 @@ function App() {
         <Header position={position} showClick={showClick} updateShowClick={updateShowClick} isAboutMeRoute={location.pathname === '/AboutMe'}/>
           <Routes>
             <Route path="/portfolio" element={<Main position={position} showClick={showClick} updateShowClick={updateShowClick} />} />
+            <Route path="/Project" element={<ProjectPage position={position} showClick={showClick} updateShowClick={updateShowClick} />} />
+            <Route path="/Cloning" element={<Cloning position={position} showClick={showClick} updateShowClick={updateShowClick} />} />
             <Route path="/AboutMe" element={<AboutMe position={position} showClick={showClick} updateShowClick={updateShowClick} />} />
+            <Route path="/Contact" element={<Contact position={position} showClick={showClick} updateShowClick={updateShowClick} />} />
+    
             {SubProjectSon.items.map((item, index) => (
               <Route key={index} path={`/${item.link}`} element={<SubProject 
                 

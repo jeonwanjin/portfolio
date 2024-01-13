@@ -1,8 +1,9 @@
 import '../css/header.css'
 import logo from '../img/logo.png'
 import logo2 from '../img/logo2.png'
+import logo3 from '../img/logo3.png'
 import { useState,useEffect } from 'react';
-import { Link  } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 const Header = ({ updateShowClick ,isAboutMeRoute}) => {
 
   const [showLogo2,setShowLogo2] = useState(false);
@@ -11,6 +12,7 @@ const Header = ({ updateShowClick ,isAboutMeRoute}) => {
   const [liOn2,setLiOn2] = useState(true);
   const [liOn3,setLiOn3] = useState(true);
   const [liOn4,setLiOn4] = useState(true);
+  const [hamOn,setHamOn] = useState(true);
   const [scrollPosition, setScrollPosition] = useState(0);
 
   const clickDown = () =>{
@@ -36,7 +38,7 @@ const Header = ({ updateShowClick ,isAboutMeRoute}) => {
         }else{
           sethideCat(true);
         }
-        if (scrollY <= 800) {
+        if (scrollY <= 400) {
           setShowLogo2(false);
         } else {
           setShowLogo2(true);
@@ -53,86 +55,109 @@ const Header = ({ updateShowClick ,isAboutMeRoute}) => {
     }, []);
 
     const handleProjectClick = () => {
-      if (!isAboutMeRoute) {
-        window.scrollTo({ top: 1900, behavior: 'smooth' });
+      
         setLiOn1(false)    
         setLiOn2(true)    
         setLiOn3(true)    
         setLiOn4(true)    
-        };    
-      
-  
+           
     };
     const handleCloningClick = () => {
-      if (!isAboutMeRoute) {
-        window.scrollTo({ top: 3800, behavior: 'smooth' });
         setLiOn1(true)    
         setLiOn2(false)    
         setLiOn3(true)    
         setLiOn4(true) 
-        };      
-
- 
+    
     };
     const handleAboutClick = () => {
-      if (!isAboutMeRoute) {
-        window.scrollTo({ top: 1050, behavior: 'smooth' });
         setLiOn1(true)    
         setLiOn2(true)    
         setLiOn3(false)    
-        setLiOn4(true) 
-        };    
-      if(isAboutMeRoute){
-        window.location.replace("/AboutMe")
-      }
- 
+        setLiOn4(true)  
     };
+
     const handleContactClick = () => {
-      if (!isAboutMeRoute) {
-        window.scrollTo({ top: 5000, behavior: 'smooth' });
         setLiOn1(true)    
         setLiOn2(true)    
         setLiOn3(true)    
         setLiOn4(false) 
-        };
     };
+
+    const clickHam = () =>{
+        setHamOn(!hamOn);
+    }
 
     return (  
       <div className="headerWrap">
+
         <header className='header'>
-          
-        <Link to="/portfolio" onClick={clickDown}>
             <h1 className={hideCat ? "logo2" : "logo"} 
                   onMouseOver={handleMouseEnter}
                   onMouseLeave={handleMouseLeave}
+                  onClick={clickDown}
             >
               <img src={showLogo2 ? logo2 : logo} alt="intro"></img>
             </h1> 
-        </Link>
+
             <ul className='nav' >
                     <li  
                     className={liOn1 ? "li1" : "li1 liOn"} 
                     onClick={handleProjectClick}
                     onMouseOver={handleMouseEnter}
-                    onMouseLeave={handleMouseLeave}>Project</li>
+                    onMouseLeave={handleMouseLeave}><Link to="/Project">Project</Link></li>
                     <li
                     className={liOn2 ? "li2" : "li2 liOn"} 
                     onClick={handleCloningClick}
                     onMouseOver={handleMouseEnter}
-                    onMouseLeave={handleMouseLeave}>Cloning</li>
+                    onMouseLeave={handleMouseLeave}><Link to="/Cloning">Cloning</Link></li>
                     <li
                     className={liOn3 ? "li3" : "li3 liOn"} 
                     onClick={handleAboutClick}
                     onMouseOver={handleMouseEnter}
-                    onMouseLeave={handleMouseLeave}>About me</li>
+                    onMouseLeave={handleMouseLeave}><Link to="/AboutMe">About me</Link></li>
                     <li
                     className={liOn4 ? "li4" : "li4 liOn"} 
                     onClick={handleContactClick}
                     onMouseOver={handleMouseEnter}
-                    onMouseLeave={handleMouseLeave}>Contact</li>
+                    onMouseLeave={handleMouseLeave}><Link to="/Contact">Contact</Link></li>
+                    <div className={hamOn? "ham" : "ham hamClick"} 
+                    onMouseOver={handleMouseEnter}
+                    onMouseLeave={handleMouseLeave}
+                    onClick={clickHam}></div>
             </ul>
         </header>
-      </div>
+        <div className={hamOn? "openHam" : "openHam hamClick"}>
+            <h1 className={"logo3"} 
+                  onMouseOver={handleMouseEnter}
+                  onMouseLeave={handleMouseLeave}
+                  onClick={clickDown}
+            >
+              <img src={logo3} alt="intro"></img>
+            </h1> 
+          <ul className='hamUl'>
+            <li  
+            className='hamLi'
+            onClick={handleProjectClick}
+            onMouseOver={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}><Link to="/Project">Project</Link></li>
+            <li
+            className='hamLi'
+            onClick={handleCloningClick}
+            onMouseOver={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}><Link to="/Cloning">Cloning</Link></li>
+            <li
+            className='hamLi'
+            onClick={handleAboutClick}
+            onMouseOver={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}><Link to="/AboutMe" target="_blank">About me</Link></li>
+            <li
+            className='hamLi'
+            onClick={handleContactClick}
+            onMouseOver={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}><Link to="/Contact">Contact</Link></li>
+          </ul>
+        </div>
+      </div>       
     );
 }
  

@@ -10,28 +10,16 @@
     padding-top: 100px;
     font-size: 124px;
     font-weight: bold;
-    opacity: 0.2;
-    transform: translateX(1700px);
+    transition: 1.2s ease-in-out;
 }
 .aboutMe2{
     padding-top: 200px;
+    margin-left: 305px;
     font-size: 36px;
     font-weight: bold;
-    opacity: 0.2;
-    transform:translateX(-1400px);
 }
 .aboutMe2 p{
     padding: 5px;
-}
-.aboutMeOn{
-    opacity: 1;
-    transition: 1.2s ease-in-out;
-    transform: translateX(0px);
-}
-.aboutMe2On{
-    opacity: 1;
-    transition: 1.2s ease-in-out;
-    transform: translateX(305px);
 }
 .aboutMeRp{
     position: relative;
@@ -39,20 +27,13 @@
     margin-left: 820px;
     margin-bottom: 50px;
     padding: 10px;
-    opacity: 0;
-    transition: 0.7s ease-in;
-    transform: translateY(400px);
-}
-.aboutMeRpOn{
-    opacity: 1;
-    transform: translateY(0px);
 }
 .aboutMeRp p{
     font-size: 24px;
     padding: 10px 0;
 }
 .aboutBtn{
-    max-width:0px;
+    width:250px;
     padding-bottom:20px; 
     background:none;
     font-size: 36px;
@@ -64,7 +45,6 @@
     white-space: nowrap;
     border-bottom: 8px solid black;
     overflow: hidden;
-    visibility: hidden;
     cursor: none;
 }
 .aboutBtnOn{
@@ -85,14 +65,5 @@
     }
     100%{
         transform: translateX(0px);     
-    }
-}
-@keyframes btnOn{
-    0%{
-        max-width: 0px;
-    }
-    100%{
-        max-width:500px;
-        visibility: visible;
     }
 }

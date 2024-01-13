@@ -8,26 +8,10 @@
 .cloning{
   font-size: 124px;
   font-weight: bold;
-  opacity: 0.2;
-  transition: 1.5s ease-in-out;
-  transform: translateX(1500px);
   margin-bottom: 100px;
-}
-.cloningOn{
-  animation: cloningOn 1s linear forwards;
-}
-@keyframes cloningOn {
-  0%{
-      opacity: 0;
-  }
-  100%{
-      opacity: 1;
-      transform: translateX(0px);
-  }
 }
 .Cloningflex{
   display: flex;
-  transform: translateY(300px);
 }
 .cloningItemWrap{
   position: relative;
@@ -36,18 +20,6 @@
   height: 900px;
   margin: 0 auto;
   overflow: hidden;
-}
-.cloningItemWrapOn{
-  animation: cloningItemWrapOn 1s linear forwards;
-}
-@keyframes cloningItemWrapOn {
-  0%{
-      opacity: 0;
-  }
-  100%{
-      opacity: 1;
-      transform: translateY(0px);
-  }
 }
 .cloningArticle{
   position:absolute;
@@ -144,7 +116,6 @@
 }
 .cloningTit:hover{
   transform: scale(1.3) translateY(-15px);
-
 }
 .up{
   padding: 10px;

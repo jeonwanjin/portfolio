@@ -1,13 +1,11 @@
 import '../css/footer.css'
-import { useState,useEffect } from 'react';
+import { useState } from 'react';
 import git from "../img/git.png";
 import mail from "../img/mail.png";
 import tel from "../img/tel.png";
 
-const Footer = ({ updateShowClick,isAboutMeRoute }  ) => {
+const Footer = ({ updateShowClick }  ) => {
 
-  const [showContact,setShowContact] = useState(false);
-  const [showContactTxt,setShowContactTxt] = useState(false);
   const [showMail,setShowMail] = useState(true);
 
   const handleMouseEnter = () => {
@@ -28,52 +26,10 @@ const Footer = ({ updateShowClick,isAboutMeRoute }  ) => {
     setShowMail(true);
   };
 
-  useEffect(() => { 
-    const handleScroll = () => {
-
-
-        const scrollY = window.pageYOffset;
-      
-        if (!isAboutMeRoute) {
-
-          if(scrollY >= 4000){
-            setShowContact(false);
-            setShowContactTxt(false);
-          }else{
-            setShowContact(true);
-            setShowContactTxt(true);
-          }
-
-        };    
-        if (isAboutMeRoute) {
-
-          if(scrollY >= 1000){
-            setShowContact(false);
-            setShowContactTxt(false);
-          }else{
-            setShowContact(true);
-            setShowContactTxt(true);
-          }
-
-        };    
-     
-
-      };
-      
-      window.addEventListener('scroll', handleScroll);
-
-      return () => {
-
-      window.removeEventListener('scroll', handleScroll);
-
-      };
-    }, [isAboutMeRoute]);
-
- 
     return (  
       <div className='footer'>
-        <div className="contactWrap">
-          <div className={showContact ? "contact" : "contact contactOn"}>
+        <div className="contactWrap loaded">
+          <div className="contact">
               <p>Contact</p> 
           </div>
             <div className={showMail ? "alertBg" : "alertBg alertOn"}></div>
@@ -83,7 +39,7 @@ const Footer = ({ updateShowClick,isAboutMeRoute }  ) => {
              onMouseLeave={handleMouseLeave}
              onClick={alertClose}>X</div>
           </div>
-          <div className={showContactTxt ? "contactTxt" : "contactTxt contactTxtOn"}>제 포트폴리오가 마음에 드셨다면 연락해 주세요.</div>
+          <div className="contactTxt">제 포트폴리오가 마음에 드셨다면 연락해 주세요.</div>
           <div className='footerMid'>
               <div className='git'
                onMouseOver={handleMouseEnter}

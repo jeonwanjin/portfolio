@@ -15,41 +15,14 @@
 .contact{
   font-size: 124px;
   font-weight: bold;
-  opacity: 0.2;
-  transition: 1.8s ease-in-out;
-  transform: translateX(1500px);
 }
-.contactOn{
-  animation: contactOn 1s linear forwards;
-}
-@keyframes contactOn {
-  0%{
-      opacity: 0;
-  }
-  100%{
-      opacity: 1;
-      transform: translateX(0px);
-  }
-}
+
 .contactTxt{
   font-size: 124px;
   font-weight: bold;
-  opacity: 0.2;
-  transition: 1.8s ease-in-out;
-  transform: translateX(-800px);
+  margin-left: 900px;
 }
-.contactTxtOn{
-  animation: contactTxtOn 1s linear forwards;
-}
-@keyframes contactTxtOn {
-  0%{
-      opacity: 0;
-  }
-  100%{
-      opacity: 1;
-      transform: translateX(900px);
-  }
-}
+
 .footerMid{
   padding-left:1050px;
   margin: 100px 0;

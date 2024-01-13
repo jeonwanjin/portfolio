@@ -1,0 +1,44 @@
+.cloning{
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding: 100px;
+}
+.cloningTit{
+  font-size: 124px;
+  font-weight: bold;
+  margin-bottom: 100px;
+}
+.cloningTit2{
+  text-align:center;
+  width: 350px;
+  padding: 30px;
+  top: 370px;
+  left: 38%;
+  font-size: 96px;
+  font-weight: bold;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.685);
+  border-radius: 25px;
+  position: absolute;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.527);
+  transition:transform 0.5s 0.2s cubic-bezier(0.68,0.03,0.29,1.09);
+  z-index:9999 !important;
+}
+.cloningArticleSub{
+  position: relative;
+  margin: 150px 0;
+  width: 1720px;
+  height:900px;
+}
+.cloningImgSub{
+  width:100%;
+  object-fit:cover;
+} 
+.cloningBoxSub{
+  width:1720px;
+  height: 900px;
+}
+.cloningTit2:hover{
+  transform: scale(1.3);
+}
