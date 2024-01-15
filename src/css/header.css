@@ -57,7 +57,7 @@ a{
     cursor: pointer;
     display: none;
     border: none;
-    z-index: 9999;
+    z-index: 99999;
 }
 .ham::before{
     position: absolute;
