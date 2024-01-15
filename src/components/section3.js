@@ -193,7 +193,7 @@ const Section3 = ({ updateShowClick }) => {
                       <div className={titOn2 ? "cloningTit" : "cloningTit titOn"} 
                       onMouseOver={handleMouseEnter}
                       onMouseLeave={handleMouseLeave}
-                      onClick={()=>{window.open("https://jeonwanjin.github.io/domino/")}}>Domino's</div>
+                      onClick={()=>{window.open("https://jeonwanjin.github.io/domino/")}}>Domino</div>
             </article>
             <article className={articleOn3? "cloningArticle cloningArticle3" : "cloningArticle cloningArticle3 articleOn"}>
                       <div className={downOn3 ? "cloningBox cloningImgL" : "cloningBox cloningImgL downOn"}><img className="cloningImg" src={Cloning3} alt="Cloning3"></img></div> 

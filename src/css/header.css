@@ -1,6 +1,6 @@
 .headerWrap{
     position: fixed;
-    width: 100%;
+    width: 100vw;
     top:40px;
     height: 100px;
     background-color: rgba(255, 255, 255, 0.8);
@@ -83,7 +83,7 @@ a{
     position: sticky;
     margin-top: -200px;
     width: 100vw;
-    height: 1000px;
+    height: 1500px;
     background: black;
     display: none;
     transform: translateX(2000px);
@@ -177,14 +177,21 @@ a{
     }
   }
 
-@media screen and (max-width: 1024px) {
-
-}
-
-@media screen and (min-width: 480px) and (max-width:768px){
-    .openHam{
-       display: block;
-       animation: openHam 0.5s linear forwards;
+@media screen and (max-width: 479px) {
+    .header{    
+        padding:0 10px;
+    }
+    .logo>img{  
+        width: 80%;
+        height: 80%;
+    }
+    .logo2>img{
+        width: 190px;
+        height: 80px;  
+    }
+    .ham{
+        transform: translateX(-100px);
     }
 }
+
   

@@ -77,3 +77,21 @@
     }
     
 }
+@media screen and (max-width: 479px) {
+    .port{
+        margin-bottom: 50px;
+    }
+    .projecTit{
+        font-size: 19px;
+        margin-bottom: 15px;
+    }
+    .projecTxt{
+        font-size: 14px;
+    }
+
+    .projectItem{
+        width: 360px;
+        height: 280px;
+        margin-bottom: 15px;
+    }
+}

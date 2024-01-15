@@ -148,5 +148,16 @@
   }
 
 @media screen and (max-width: 1024px) {
- 
+    
+    #backsection{
+        height: 50vh;
+    }
+    .flash{
+        height: 50vh;
+    }
 }
+
+@media screen and (min-width: 480px) and (max-width:768px){
+
+}
+  
