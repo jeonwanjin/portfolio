@@ -64,16 +64,17 @@
 
 @media screen and (max-width: 1024px) {
     .projecTit{
-        font-size: 20px;
-        margin-bottom: 15px;
+        font-size: 36px;
+        margin-bottom: 30px;
     }
     .projecTxt{
-        margin-bottom: 15px;   
+        margin-bottom: 30px;   
+        font-size: 24px;
     }
     .projectItem{
-        width: 650px;
-        height: 450px;
-        margin-bottom: 15px;
+        width: 900px;
+        height: 600px;
+        margin-bottom: 30px;
     }
     
 }

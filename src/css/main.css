@@ -32,7 +32,7 @@
     position: absolute;
     top:0;
     left: 0;
-    width:100%; 
+    width:1720px; 
     height:100vh;
     animation:flash 5s linear infinite, flash2 0.08s linear infinite;
     z-index: -3;
@@ -142,22 +142,38 @@
 
 
 
-
-@media screen and (max-width: 1280px) {
- 
-  }
-
 @media screen and (max-width: 1024px) {
-    
-    #backsection{
-        height: 50vh;
-    }
     .flash{
-        height: 50vh;
+        height: 70vh;
+       
+    }
+    #backsection{
+        height: 70vh;
     }
 }
 
-@media screen and (min-width: 480px) and (max-width:768px){
+@media screen and (max-width: 479px) {
 
+    .intro{
+       display: none;
+    }
+    .intro>img{
+       display: none;
+    }   
+    .flash{
+       display: none;
+    }
+    #backsection{
+       display: none;
+    }
+    .monitorWrap{
+        display: none;
+    }
+    .clockWrap{
+        display: none;
+    }
+    .mainBlock{
+        display: none;
+    }
 }
   
