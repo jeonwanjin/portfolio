@@ -277,14 +277,12 @@
     width: 89.583vw;
     height:400px;
   }
-  
     .cloningTit{
     width: 110px;
     padding: 30px;
     top: 120px;
     left: 25%;
     font-size: 36px !important;
-
   }
   .cloningBtn{
     position: absolute;

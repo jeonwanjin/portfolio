@@ -5,7 +5,7 @@
   padding: 100px;
 }
 .cloningTit{
-  font-size: 124px;
+  font-size: 6.45vw;
   font-weight: bold;
   margin-bottom: 100px;
 }
@@ -15,7 +15,7 @@
   padding: 30px;
   top: 370px;
   left: 38%;
-  font-size: 96px;
+  font-size: 5.58vw;
   font-weight: bold;
   color: white;
   background-color: rgba(0, 0, 0, 0.685);
@@ -41,4 +41,34 @@
 }
 .cloningTit2:hover{
   transform: scale(1.3);
+}
+
+
+@media screen and (max-width: 479px) {
+  .cloning{
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: -50px;
+    padding: 100px;
+  }
+  .cloningArticleSub{
+    width: 89.583vw;
+    height:100px;
+    margin: 150px 0;
+  }
+  .cloningBoxSub{
+    width:93%;
+    height:100px;
+  }
+  .cloningTit1>p{
+    margin-bottom: -100px;
+  }
+  .cloningTit2{
+    text-align:center;
+    width: 200px;
+    padding: 10px;
+    top: 70px;
+    left: 15%;
+  }
 }

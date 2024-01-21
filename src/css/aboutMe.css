@@ -13,14 +13,13 @@
 
 .subAboutMeTit{
   padding: 100px 0;
-  font-size: 124px;
+  font-size: 6.45vw;
   font-weight: bold;
 }
 .profile{
   width: 400px;
   height: 700px;
   padding: 50px;
- 
 }
 .profile p{
   font-size: 22px;
@@ -58,4 +57,74 @@
 .skillP{
   padding:5px;
   font-size: 19px !important;
+}
+
+.aboutFlex{
+  display: flex;
+  z-index: -1;
+}
+
+@media screen and (max-width: 479px) {
+  .maginTop50{
+    margin-top: 0;
+  }
+  .subAboutMe{
+    position: relative;
+    width:90%; 
+    height: 2450px;
+    margin: 0 auto;
+    margin-top: 40px;
+    margin-bottom:200px;
+    z-index: 1;
+  }
+  .subAboutMeTit{
+    padding: 50px 0px;
+  }
+  .jin{
+    width: 350px;
+    height: auto;
+  }
+  .profile{
+    width: 350px;
+    height: 700px;
+    padding: 10px;
+  }
+  .profile:nth-of-type(2){
+    margin-top: 0px;
+  }
+  .profile:nth-of-type(3){
+    margin-top: 250px;
+  }
+  .profile p{
+    font-size: 16px;
+    padding-bottom: 10px;
+  }
+  .profile>p:first-of-type{
+    padding: 20px 0;
+    font-size: 26px;
+  }
+  .skills>p{
+    margin-top: 0px;
+    padding-bottom:20px;
+    font-size: 26px;
+  }
+  .experiece>p{
+    margin-top: 0px;
+    padding: 0;
+    padding-bottom:20px;
+    font-size: 26px;
+  }
+  .education>p{
+    margin-top: 0px;
+    padding-bottom:20px;
+    font-size: 26px;
+  }
+  .aboutFlex{
+    display: block;
+    margin-top: 10px;
+  }
+  .skill{
+    width: 20px;
+    height: 20px;
+  }
 }
